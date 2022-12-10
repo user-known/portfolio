@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Sacramento&family=Shrikhand&display=swap');
+
+body{
+    margin: 0px;
+    text-align: center;
+}
+/* nav bar */
+/*
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #C8DAD3;
+}
+  
+li{
+    float: left;
+}
+  
+li a{
+    display: block;
+    color: #63707E;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Montserrat',sans-serif;
+}
+  
+li a:hover {
+    background-color: #F2F6F5;
+    color: #C8DAD3;
+}
+*/ 
+/* end of nav bar */
+
+/*elements*/
+h1{
+    margin: 0px;
+    padding: 10px;
+    font-family: 'Shrikhand', cursive;
+    font-size: 6rem;
+    font-weight: 100;
+    color: #F2F6F5;
+}
+p{
+    margin: 0px;
+    padding: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #93B5B3;
+}
+
+img{
+    width: 600px;
+    height: 600px;
+}
+h2{
+    margin: 0;
+    padding: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: #63707E;
+}
+hr{
+    width: 5%;
+    border-style: dotted none none none;
+    border-width: 10px;
+    border-color: #D6E4E5;
+}
+/*end of elements*/
+
+/*class*/
+.top-container{
+    background-color:  #C8DAD3;
+    position: relative;
+    padding: 100px;
+}
+.middle-container{
+    margin: 200px auto 200px auto;
+}
+.bottom-container {
+    margin: 0px auto 0px auto;
+    background-color:  #C8DAD3;
+    position: relative;
+    padding: 100px;
+}
+.profile {
+    width: 50%;
+    margin: 100px auto 100px auto;
+    line-height: 2;
+    text-align: left;
+}
+.profile p{
+    padding: 10px;
+}
+.profile_img{
+    width: 30%;
+    height: auto;
+    float: left;
+    margin-right: 50px
+}
+.skill {
+    width: 50%;
+    margin: 100px auto 100px auto;
+    line-height: 2;
+    text-align: left;
+}
+.skill p{
+    padding: 10px;
+    color:white ;
+}
+.skill_img_1{
+    width: 30%;
+    height: auto;
+    float: right;
+    margin-right: 50px
+}
+.skill_img_2{
+    width: 30%;
+    height: auto;
+    float: left;
+    margin-right: 50px
+}
+
+.footer{
+    margin: 50px auto 0;
+    background-color:  #C8DAD3;
+}
+.footer_link{
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+    color: #F2F6F5;
+}
+.see_ya{
+    margin: 50px auto 50px auto;
+    width: auto;
+}
+.footer p{
+    color: #F2F6F5;
+}
+.footer_link a{
+    color: #F2F6F5;
+}
+/*end class*/

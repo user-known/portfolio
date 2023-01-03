@@ -4,23 +4,25 @@ body{
     margin: 0px;
     text-align: center;
 }
+
 /* nav bar */
-/*
 ul{
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding-top: 10px;
+    padding-left: 400px;
     overflow: hidden;
     background-color: #C8DAD3;
 }
   
 li{
     float: left;
+    font-size: 25px;
 }
   
 li a{
     display: block;
-    color: #63707E;
+    color: #F2F6F5;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -29,10 +31,23 @@ li a{
   
 li a:hover {
     background-color: #F2F6F5;
-    color: #C8DAD3;
+    color:  #63707E;
 }
-*/ 
+.navbar{
+    background-color: #C8DAD3;
+    height: 100px;
+}
+.navbar-contents{
+    padding: 30px;
+}
+.logo{
+    width: 90px;
+    padding: 10px 300px 10px 300px;
+    height: auto;
+    float: left;
+}
 /* end of nav bar */
+
 
 /*elements*/
 h1{
@@ -78,6 +93,7 @@ hr{
 }
 .middle-container{
     margin: 200px auto 200px auto;
+    position: relative;
 }
 .bottom-container {
     margin: 0px auto 0px auto;
@@ -87,24 +103,28 @@ hr{
 }
 .profile {
     width: 50%;
-    margin: 100px auto 100px auto;
+    margin: 50px 400px 50px;
     line-height: 2;
     text-align: left;
 }
 .profile p{
+    width: 500px;
     padding: 10px;
+    position: absolute;
+    text-align: justify;
+    left: 900px;
+    top: 200px;
 }
-.profile_img{
-    width: 30%;
+.profile img{
+    width: 50%;
     height: auto;
-    float: left;
-    margin-right: 50px
+    position: relative;
 }
 .skill {
     width: 50%;
     margin: 100px auto 100px auto;
     line-height: 2;
-    text-align: left;
+    text-align: justify;
 }
 .skill p{
     padding: 10px;
@@ -114,13 +134,13 @@ hr{
     width: 30%;
     height: auto;
     float: right;
-    margin-right: 50px
+    margin: 50px
 }
 .skill_img_2{
-    width: 30%;
+    width: 35%;
     height: auto;
     float: left;
-    margin-right: 50px
+    margin: 50px
 }
 
 .footer{

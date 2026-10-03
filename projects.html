@@ -3,11 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Vignesh Balakumar · Visual &amp; Brand Designer</title>
-<meta name="description" content="Visual and brand designer in India. Brand identity, web design and campaign work.">
+<title>All projects · Vignesh Balakumar</title>
+<meta name="description" content="Brand identity, web and campaign projects by Vignesh Balakumar.">
 <meta name="theme-color" content="#FBFBF9">
 <script>document.documentElement.classList.add("js");</script>
-<!-- General Sans (Fontshare). DM Sans is the fallback. Check the Fontshare license for your use. -->
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap">
@@ -506,182 +505,97 @@ figcaption, .cap { margin-top: 10px; font-size: 12px; color: var(--faint); }
 </svg>
 
 <nav class="nav" aria-label="Primary">
-  <a class="avatar" href="#top" aria-label="Back to top">V</a>
+  <a class="avatar" href="index.html" aria-label="Home">V</a>
   <div class="links">
     <i class="indicator" aria-hidden="true"></i>
-    <a class="link" href="#work">Work</a>
-    <a class="link" href="#about">About</a>
-    <a class="link opt" href="#faq">FAQ</a>
+    <a class="link active" href="index.html#work">Work</a>
+    <a class="link" href="about.html">About</a>
+    <a class="link opt" href="index.html#faq">FAQ</a>
   </div>
   <a class="pill-dark" data-mail href="mailto:hello@yourdomain.com"><svg class="i"><use href="#i-mail"/></svg>Email</a>
   <button class="icon-btn" id="theme" type="button" aria-label="Switch to dark mode"><svg class="i"><use href="#i-moon"/></svg></button>
 </nav>
 
 
-<header class="hero">
+<header class="case-hero">
   <div class="grid-bg"></div>
   <div class="wrap">
-    <div class="hero-load">
-      <span class="chip"><b>Vignesh Balakumar</b> &nbsp;&bull;&nbsp; India</span>
-      <h1>
-        <span class="ln"><span style="--d:.15s">Hi, I'm Vignesh!</span></span>
-        <span class="ln"><span style="--d:.3s">I'm a <span class="hl">visual &amp; brand designer</span></span></span>
-      </h1>
-      <p class="lede">I craft brands and visuals that are clear, consistent and built to last.</p>
-      <div class="path" aria-label="Career path">
-        <span>Cartrabbit</span><span class="arrow">&rarr;</span><span>Acme Interiors</span><span class="arrow">&rarr;</span>
-        <span class="status"><span class="dot"></span>BrandIT Studio</span>
-      </div>
-      <div class="btn-row">
-        <button class="pill dark" type="button" data-copy><svg class="i"><use href="#i-copy"/></svg><span data-email>hello@yourdomain.com</span></button>
-        <a class="pill" href="#"><svg class="i"><use href="#i-in"/></svg>LinkedIn</a>
-        <a class="pill" href="#"><svg class="i"><use href="#i-link"/></svg>Behance</a>
-      </div>
-    </div>
+    <a class="back hero-in" href="index.html#work"><svg class="i"><use href="#i-left"/></svg>Home</a>
+    <h1 style="margin-top:26px"><span class="ln"><span style="--d:.12s">All <span class="hl">projects</span></span></span></h1>
+    <p class="sub hero-in" style="animation-delay:.4s">Brand identity, web and campaign work. Filter by type, or open a project to read the case study.</p>
 
-    <div class="stack" aria-label="Featured work">
-      <a class="stack-card" id="stackCard" href="#work">
-        <span class="stack-ico" id="stackIco"></span>
-        <span class="stack-txt"><span class="stack-meta" id="stackMeta"></span><br><span class="stack-title" id="stackTitle"></span></span>
-        <button class="stack-next" id="stackNext" type="button" aria-label="Next project"><svg class="i"><use href="#i-right"/></svg></button>
-      </a>
-      <div class="dots" id="dots"></div>
+    <div class="proj-head hero-in" style="animation-delay:.5s">
+      <div class="filters" id="filters" role="group" aria-label="Filter projects">
+        <button class="fchip" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="fchip" type="button" data-filter="brand" aria-pressed="false">Brand identity</button>
+        <button class="fchip" type="button" data-filter="web" aria-pressed="false">Web</button>
+        <button class="fchip" type="button" data-filter="campaign" aria-pressed="false">Campaign</button>
+      </div>
+      <span class="proj-count" id="projCount" aria-live="polite">4 projects</span>
     </div>
   </div>
 </header>
 
 <main>
-  <section id="work">
-    <div class="wrap">
-      <h2 data-reveal>Selected work</h2>
-      <div class="work-list">
+  <div class="wrap">
+    <div class="proj-grid" data-stagger=".08">
 
-        <article class="case">
-          <div class="cover" data-reveal style="--bg-cover: radial-gradient(80% 90% at 15% 15%, #E9C46A 0%, transparent 55%), radial-gradient(70% 80% at 90% 85%, #8A4B25 0%, transparent 60%), #1E1A14;">
+      <article class="proj" data-cats="brand web campaign">
+        <a class="proj-in" href="case-study.html">
+          <div class="cover" style="--bg-cover: radial-gradient(80% 90% at 15% 15%, #E9C46A 0%, transparent 55%), radial-gradient(70% 80% at 90% 85%, #8A4B25 0%, transparent 60%), #1E1A14;">
             <!-- Real image: <img src="images/acme.jpg" alt="Acme Interiors identity"> -->
             <span class="mark">Acme Interiors</span>
           </div>
-          <div data-stagger=".07">
-            <div class="meta">Acme Interiors &bull; Interiors &bull; Rebrand</div>
-            <h3>Rebranding an interiors studio from logo to launch</h3>
-            <p class="metric"><strong>Full identity system</strong> logo, website visuals and campaign creatives</p>
-            <p class="desc">Creative lead on the rebrand, from the first logo sketches to the website and social rollout.</p>
-            <div class="tags"><span>Brand identity</span><span>Logo design</span><span>Web visuals</span></div>
-            <a class="read" href="case-study.html">Read case study <svg class="i"><use href="#i-right"/></svg></a>
-          </div>
-        </article>
+          <div class="meta">Acme Interiors &bull; Interiors &bull; 2026</div>
+          <h3>Rebranding an interiors studio from logo to launch</h3>
+          <p class="desc">Creative lead on the rebrand, from the first logo sketches to the website and social rollout.</p>
+          <div class="tags"><span>Brand identity</span><span>Logo design</span><span>Web visuals</span></div>
+          <span class="read">Read case study <svg class="i"><use href="#i-right"/></svg></span>
+        </a>
+      </article>
 
-        <article class="case">
-          <div class="cover" data-reveal style="--bg-cover: radial-gradient(75% 85% at 85% 20%, #E5383B 0%, transparent 58%), radial-gradient(70% 80% at 10% 90%, #4A1517 0%, transparent 60%), #0F0F10;">
+      <article class="proj" data-cats="brand">
+        <a class="proj-in" href="#">
+          <div class="cover" style="--bg-cover: radial-gradient(75% 85% at 85% 20%, #E5383B 0%, transparent 58%), radial-gradient(70% 80% at 10% 90%, #4A1517 0%, transparent 60%), #0F0F10;">
             <span class="mark">Braapstop Motorsport</span>
           </div>
-          <div data-stagger=".07">
-            <div class="meta">Braapstop Motorsport &bull; Motorsport &bull; Branding</div>
-            <h3>Add your one-line project title here</h3>
-            <p class="metric"><strong>Add a headline result</strong> and a short supporting detail</p>
-            <p class="desc">Add one sentence on your role and what you delivered.</p>
-            <div class="tags"><span>Brand identity</span><span>Visual design</span></div>
-            <a class="read" href="#">Read case study <svg class="i"><use href="#i-right"/></svg></a>
-          </div>
-        </article>
+          <div class="meta">Braapstop Motorsport &bull; Motorsport &bull; Add year</div>
+          <h3>Add your one-line project title here</h3>
+          <p class="desc">Add one sentence on your role and what you delivered.</p>
+          <div class="tags"><span>Brand identity</span><span>Visual design</span></div>
+          <span class="read">Read case study <svg class="i"><use href="#i-right"/></svg></span>
+        </a>
+      </article>
 
-        <article class="case">
-          <div class="cover" data-reveal style="--bg-cover: radial-gradient(75% 85% at 20% 20%, #2EC4B6 0%, transparent 58%), radial-gradient(70% 80% at 90% 90%, #1B3A6B 0%, transparent 62%), #0E2233;">
+      <article class="proj" data-cats="brand campaign">
+        <a class="proj-in" href="#">
+          <div class="cover" style="--bg-cover: radial-gradient(75% 85% at 20% 20%, #2EC4B6 0%, transparent 58%), radial-gradient(70% 80% at 90% 90%, #1B3A6B 0%, transparent 62%), #0E2233;">
             <span class="mark">AS WE GO</span>
           </div>
-          <div data-stagger=".07">
-            <div class="meta">AS WE GO &bull; Add industry &bull; Add scope</div>
-            <h3>Add your one-line project title here</h3>
-            <p class="metric"><strong>Add a headline result</strong> and a short supporting detail</p>
-            <p class="desc">Add one sentence on your role and what you delivered.</p>
-            <div class="tags"><span>Branding</span><span>Campaign</span></div>
-            <a class="read" href="#">Read case study <svg class="i"><use href="#i-right"/></svg></a>
-          </div>
-        </article>
+          <div class="meta">AS WE GO &bull; Add industry &bull; Add year</div>
+          <h3>Add your one-line project title here</h3>
+          <p class="desc">Add one sentence on your role and what you delivered.</p>
+          <div class="tags"><span>Branding</span><span>Campaign</span></div>
+          <span class="read">Read case study <svg class="i"><use href="#i-right"/></svg></span>
+        </a>
+      </article>
 
-        <article class="case">
-          <div class="cover" data-reveal style="--bg-cover: radial-gradient(75% 85% at 80% 15%, #F4A261 0%, transparent 56%), radial-gradient(70% 80% at 10% 90%, #2D6A4F 0%, transparent 62%), #17301F;">
+      <article class="proj" data-cats="brand">
+        <a class="proj-in" href="#">
+          <div class="cover" style="--bg-cover: radial-gradient(75% 85% at 80% 15%, #F4A261 0%, transparent 56%), radial-gradient(70% 80% at 10% 90%, #2D6A4F 0%, transparent 62%), #17301F;">
             <span class="mark">The Adventure Kid</span>
           </div>
-          <div data-stagger=".07">
-            <div class="meta">The Adventure Kid &bull; Add industry &bull; Add scope</div>
-            <h3>Add your one-line project title here</h3>
-            <p class="metric"><strong>Add a headline result</strong> and a short supporting detail</p>
-            <p class="desc">Add one sentence on your role and what you delivered.</p>
-            <div class="tags"><span>Branding</span><span>Visual design</span></div>
-            <a class="read" href="#">Read case study <svg class="i"><use href="#i-right"/></svg></a>
-          </div>
-        </article>
+          <div class="meta">The Adventure Kid &bull; Add industry &bull; Add year</div>
+          <h3>Add your one-line project title here</h3>
+          <p class="desc">Add one sentence on your role and what you delivered.</p>
+          <div class="tags"><span>Branding</span><span>Visual design</span></div>
+          <span class="read">Read case study <svg class="i"><use href="#i-right"/></svg></span>
+        </a>
+      </article>
 
-      </div>
-      <div class="more-row" data-reveal>
-        <a class="pill dark big" href="projects.html">View more projects <svg class="i"><use href="#i-right"/></svg></a>
-      </div>
-      <div class="more-work" data-reveal>
-        <a class="pill dark" href="projects.html">View more projects <svg class="i"><use href="#i-right"/></svg></a>
-      </div>
     </div>
-  </section>
-
-  <section id="about">
-    <div class="wrap">
-      <div class="about">
-        <div data-reveal>
-          <h2>About</h2>
-          <dl class="facts">
-            <div><dt>Based in</dt><dd>India</dd></div>
-            <div><dt>Focus</dt><dd>Brand identity, web design</dd></div>
-            <div><dt>Disciplines</dt><dd>Branding, UI/UX, motion</dd></div>
-          </dl>
-        </div>
-        <div>
-          <h3 data-reveal style="--d:.08s">I came to brand design through engineering and <span class="hl">web development</span></h3>
-          <ul class="bullets" id="bullets" data-stagger=".09">
-            <li>A computer science degree taught me to think in systems, so every identity I make is built to work across every place it will appear.</li>
-            <li>At Cartrabbit I spent two years across web design, development, content and motion for products like Retainful, Flycart, Yuko and Shopbrew.</li>
-            <li data-extra>Now at Acme Interiors I lead the rebrand: logo and identity, website visuals and social and campaign creatives.</li>
-            <li data-extra>I like the work most when the idea, the visuals and the build all agree, so the brand feels the same everywhere it shows up.</li>
-          </ul>
-          <div class="about-actions">
-            <button class="toggle" id="more" type="button" aria-expanded="true"><span>Show less</span><svg class="i"><use href="#i-down"/></svg></button>
-            <a class="read" href="about.html">More about me <svg class="i"><use href="#i-right"/></svg></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="tools">
-        <h4 data-reveal>Tools I use</h4>
-        <div class="tool-row" data-stagger=".06">
-          <div class="tool"><i style="color:#F24E1E">Fg</i>Figma</div>
-          <div class="tool"><i style="color:#146EF5">Wf</i>Webflow</div>
-          <div class="tool"><i style="color:#31A8FF">Ps</i>Photoshop</div>
-          <div class="tool"><i style="color:#FF9A00">Ai</i>Illustrator</div>
-          <div class="tool"><i style="color:#9999FF">Ae</i>After Effects</div>
-          <div class="tool"><i style="color:#D97757">Cl</i>Claude</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div class="wrap">
-      <h2 data-reveal>Frequently asked</h2>
-      <div class="faq" id="faqList" data-reveal style="--d:.1s">
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" aria-controls="a1" id="q1">What guides your approach to design?<span class="tg"><svg class="i"><use href="#i-plus"/></svg></span></button>
-          <div class="faq-a" id="a1" role="region" aria-labelledby="q1"><div><p>Start with the business and the audience, then build a simple system that can be applied everywhere. Clarity first, then craft.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" aria-controls="a2" id="q2">What kinds of projects excite you most right now?<span class="tg"><svg class="i"><use href="#i-plus"/></svg></span></button>
-          <div class="faq-a" id="a2" role="region" aria-labelledby="q2"><div><p>Brand identities that continue into a website and campaign work, where one team owns the whole visual story.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="true" aria-controls="a3" id="q3">How do you work with clients and teams?<span class="tg"><svg class="i"><use href="#i-plus"/></svg></span></button>
-          <div class="faq-a open" id="a3" role="region" aria-labelledby="q3"><div><p>I share work early and often, explain the reasoning behind each decision, and hand over files and guidelines that other people can pick up and use without me.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <p class="proj-empty" id="projEmpty">No projects in this category yet.</p>
+  </div>
 </main>
 
 <footer>

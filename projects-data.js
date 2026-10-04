@@ -1,5 +1,6 @@
 /* Portfolio data. Edit with admin.html, or by hand.
-   Keep the two assignments below; the site reads them on every page. */
+   Keep the two assignments below; the site reads them on every page.
+   Generated 2026-10-04. */
 window.PORTFOLIO_CATEGORIES = [
   {
     "id": "brand",

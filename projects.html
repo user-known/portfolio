@@ -479,6 +479,12 @@ figcaption, .cap { margin-top: 10px; font-size: 12px; color: var(--faint); }
 .proj-empty.show { display: block; }
 @media (max-width: 820px) { .proj-grid { grid-template-columns: 1fr; gap: 40px; } }
 
+/* Case page additions */
+.shot { display: block; width: 100%; height: auto; border-radius: 12px; }
+.facts-bar { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.preview-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; text-align: center; padding: 8px; font-size: 12px; font-weight: 500; background: var(--btn); color: var(--btn-ink); }
+.adm-fields select, .adm-case select { width: 100%; font: inherit; font-size: 14px; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; }
+
 </style>
 </head>
 <body id="top">
@@ -525,75 +531,15 @@ figcaption, .cap { margin-top: 10px; font-size: 12px; color: var(--faint); }
     <p class="sub hero-in" style="animation-delay:.4s">Brand identity, web and campaign work. Filter by type, or open a project to read the case study.</p>
 
     <div class="proj-head hero-in" style="animation-delay:.5s">
-      <div class="filters" id="filters" role="group" aria-label="Filter projects">
-        <button class="fchip" type="button" data-filter="all" aria-pressed="true">All</button>
-        <button class="fchip" type="button" data-filter="brand" aria-pressed="false">Brand identity</button>
-        <button class="fchip" type="button" data-filter="web" aria-pressed="false">Web</button>
-        <button class="fchip" type="button" data-filter="campaign" aria-pressed="false">Campaign</button>
-      </div>
-      <span class="proj-count" id="projCount" aria-live="polite">4 projects</span>
+      <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+      <span class="proj-count" id="projCount" aria-live="polite"></span>
     </div>
   </div>
 </header>
 
 <main>
   <div class="wrap">
-    <div class="proj-grid" data-stagger=".08">
-
-      <article class="proj" data-cats="brand web campaign">
-        <a class="proj-in" href="case-study.html">
-          <div class="cover" style="--bg-cover: radial-gradient(80% 90% at 15% 15%, #E9C46A 0%, transparent 55%), radial-gradient(70% 80% at 90% 85%, #8A4B25 0%, transparent 60%), #1E1A14;">
-            <!-- Real image: <img src="images/acme.jpg" alt="Acme Interiors identity"> -->
-            <span class="mark">Acme Interiors</span>
-          </div>
-          <div class="meta">Acme Interiors &bull; Interiors &bull; 2026</div>
-          <h3>Rebranding an interiors studio from logo to launch</h3>
-          <p class="desc">Creative lead on the rebrand, from the first logo sketches to the website and social rollout.</p>
-          <div class="tags"><span>Brand identity</span><span>Logo design</span><span>Web visuals</span></div>
-          <span class="read">Read case study <svg class="i"><use href="#i-right"/></svg></span>
-        </a>
-      </article>
-
-      <article class="proj" data-cats="brand">
-        <a class="proj-in" href="#">
-          <div class="cover" style="--bg-cover: radial-gradient(75% 85% at 85% 20%, #E5383B 0%, transparent 58%), radial-gradient(70% 80% at 10% 90%, #4A1517 0%, transparent 60%), #0F0F10;">
-            <span class="mark">Braapstop Motorsport</span>
-          </div>
-          <div class="meta">Braapstop Motorsport &bull; Motorsport &bull; Add year</div>
-          <h3>Add your one-line project title here</h3>
-          <p class="desc">Add one sentence on your role and what you delivered.</p>
-          <div class="tags"><span>Brand identity</span><span>Visual design</span></div>
-          <span class="read">Read case study <svg class="i"><use href="#i-right"/></svg></span>
-        </a>
-      </article>
-
-      <article class="proj" data-cats="brand campaign">
-        <a class="proj-in" href="#">
-          <div class="cover" style="--bg-cover: radial-gradient(75% 85% at 20% 20%, #2EC4B6 0%, transparent 58%), radial-gradient(70% 80% at 90% 90%, #1B3A6B 0%, transparent 62%), #0E2233;">
-            <span class="mark">AS WE GO</span>
-          </div>
-          <div class="meta">AS WE GO &bull; Add industry &bull; Add year</div>
-          <h3>Add your one-line project title here</h3>
-          <p class="desc">Add one sentence on your role and what you delivered.</p>
-          <div class="tags"><span>Branding</span><span>Campaign</span></div>
-          <span class="read">Read case study <svg class="i"><use href="#i-right"/></svg></span>
-        </a>
-      </article>
-
-      <article class="proj" data-cats="brand">
-        <a class="proj-in" href="#">
-          <div class="cover" style="--bg-cover: radial-gradient(75% 85% at 80% 15%, #F4A261 0%, transparent 56%), radial-gradient(70% 80% at 10% 90%, #2D6A4F 0%, transparent 62%), #17301F;">
-            <span class="mark">The Adventure Kid</span>
-          </div>
-          <div class="meta">The Adventure Kid &bull; Add industry &bull; Add year</div>
-          <h3>Add your one-line project title here</h3>
-          <p class="desc">Add one sentence on your role and what you delivered.</p>
-          <div class="tags"><span>Branding</span><span>Visual design</span></div>
-          <span class="read">Read case study <svg class="i"><use href="#i-right"/></svg></span>
-        </a>
-      </article>
-
-    </div>
+    <div class="proj-grid" id="projGrid"></div>
     <p class="proj-empty" id="projEmpty">No projects in this category yet.</p>
   </div>
 </main>
@@ -616,6 +562,354 @@ figcaption, .cap { margin-top: 10px; font-size: 12px; color: var(--faint); }
 </footer>
 
 
+<script src="projects-data.js"></script>
+<script>
+/* Fallback copy, used only if projects-data.js cannot be loaded (for example in a preview). */
+if (!window.PORTFOLIO_PROJECTS) {
+/* Portfolio data. Edit with admin.html, or by hand.
+   Keep the two assignments below; the site reads them on every page. */
+window.PORTFOLIO_CATEGORIES = [
+  {
+    "id": "brand",
+    "label": "Brand identity"
+  },
+  {
+    "id": "web",
+    "label": "Web"
+  },
+  {
+    "id": "campaign",
+    "label": "Campaign"
+  }
+];
+window.PORTFOLIO_PROJECTS = [
+  {
+    "id": "acme-interiors",
+    "client": "Acme Interiors",
+    "title": "Rebranding an interiors studio from logo to launch",
+    "industry": "Interiors",
+    "year": "2026",
+    "metricBold": "Full identity system",
+    "metricText": "logo, website visuals and campaign creatives",
+    "summary": "Creative lead on the rebrand, from the first logo sketches to the website and social rollout.",
+    "tags": [
+      "Brand identity",
+      "Logo design",
+      "Web visuals"
+    ],
+    "cats": [
+      "brand",
+      "web",
+      "campaign"
+    ],
+    "colors": {
+      "a": "#E9C46A",
+      "b": "#8A4B25",
+      "base": "#1E1A14"
+    },
+    "image": "",
+    "url": "",
+    "featured": true,
+    "case": {
+      "enabled": true,
+      "role": "Creative & Graphic Designer",
+      "sub": "I led the Acme Interiors rebrand end to end, from the first logo sketches to website visuals and social campaigns.",
+      "badge": "",
+      "liveLabel": "",
+      "liveUrl": "",
+      "quote": {
+        "text": "",
+        "by": ""
+      },
+      "gallery": [],
+      "brief": {
+        "lead": "The brief: rebuild the Acme Interiors identity and carry it across web and social.",
+        "text": ""
+      },
+      "process": {
+        "intro": "The rebrand moved through four phases. Each one narrowed the work from open questions to finished assets.",
+        "phases": [
+          "Discover",
+          "Define",
+          "Develop",
+          "Deliver"
+        ],
+        "caption": "The Double Diamond: diverge and converge on the problem, then on the solution."
+      },
+      "challenge": {
+        "text": "How can Acme Interiors present one consistent identity across its logo, website and social channels, so every touchpoint feels like the same studio?",
+        "image": "",
+        "caption": ""
+      },
+      "stats": [],
+      "questions": [
+        "Who is the brand speaking to, and what do they expect from an interiors studio?",
+        "Where does the current identity break down across web, print and social?",
+        "What should stay, and what should change?"
+      ],
+      "insights": [],
+      "identity": {
+        "text": "",
+        "image": "",
+        "caption": ""
+      },
+      "identityExtras": [],
+      "website": {
+        "intro": ""
+      },
+      "slides": [],
+      "campaign": {
+        "intro": "",
+        "caption": ""
+      },
+      "posts": [],
+      "outcomes": [
+        {
+          "icon": "check",
+          "title": "Delivered end to end",
+          "text": "I owned the rebrand from logo and identity to website visuals and campaign creatives."
+        }
+      ],
+      "closing": {
+        "text": "",
+        "ctaLabel": "",
+        "ctaUrl": ""
+      }
+    }
+  },
+  {
+    "id": "braapstop-motorsport",
+    "client": "Braapstop Motorsport",
+    "title": "Add your one-line project title here",
+    "industry": "Motorsport",
+    "year": "",
+    "metricBold": "",
+    "metricText": "",
+    "summary": "Add one sentence on your role and what you delivered.",
+    "tags": [
+      "Brand identity",
+      "Visual design"
+    ],
+    "cats": [
+      "brand"
+    ],
+    "colors": {
+      "a": "#E5383B",
+      "b": "#4A1517",
+      "base": "#0F0F10"
+    },
+    "image": "",
+    "url": "",
+    "featured": true,
+    "case": {
+      "enabled": false,
+      "role": "",
+      "sub": "",
+      "badge": "",
+      "liveLabel": "",
+      "liveUrl": "",
+      "quote": {
+        "text": "",
+        "by": ""
+      },
+      "gallery": [],
+      "brief": {
+        "lead": "",
+        "text": ""
+      },
+      "process": {
+        "intro": "",
+        "phases": [],
+        "caption": ""
+      },
+      "challenge": {
+        "text": "",
+        "image": "",
+        "caption": ""
+      },
+      "stats": [],
+      "questions": [],
+      "insights": [],
+      "identity": {
+        "text": "",
+        "image": "",
+        "caption": ""
+      },
+      "identityExtras": [],
+      "website": {
+        "intro": ""
+      },
+      "slides": [],
+      "campaign": {
+        "intro": "",
+        "caption": ""
+      },
+      "posts": [],
+      "outcomes": [],
+      "closing": {
+        "text": "",
+        "ctaLabel": "",
+        "ctaUrl": ""
+      }
+    }
+  },
+  {
+    "id": "as-we-go",
+    "client": "AS WE GO",
+    "title": "Add your one-line project title here",
+    "industry": "",
+    "year": "",
+    "metricBold": "",
+    "metricText": "",
+    "summary": "Add one sentence on your role and what you delivered.",
+    "tags": [
+      "Branding",
+      "Campaign"
+    ],
+    "cats": [
+      "brand",
+      "campaign"
+    ],
+    "colors": {
+      "a": "#2EC4B6",
+      "b": "#1B3A6B",
+      "base": "#0E2233"
+    },
+    "image": "",
+    "url": "",
+    "featured": true,
+    "case": {
+      "enabled": false,
+      "role": "",
+      "sub": "",
+      "badge": "",
+      "liveLabel": "",
+      "liveUrl": "",
+      "quote": {
+        "text": "",
+        "by": ""
+      },
+      "gallery": [],
+      "brief": {
+        "lead": "",
+        "text": ""
+      },
+      "process": {
+        "intro": "",
+        "phases": [],
+        "caption": ""
+      },
+      "challenge": {
+        "text": "",
+        "image": "",
+        "caption": ""
+      },
+      "stats": [],
+      "questions": [],
+      "insights": [],
+      "identity": {
+        "text": "",
+        "image": "",
+        "caption": ""
+      },
+      "identityExtras": [],
+      "website": {
+        "intro": ""
+      },
+      "slides": [],
+      "campaign": {
+        "intro": "",
+        "caption": ""
+      },
+      "posts": [],
+      "outcomes": [],
+      "closing": {
+        "text": "",
+        "ctaLabel": "",
+        "ctaUrl": ""
+      }
+    }
+  },
+  {
+    "id": "the-adventure-kid",
+    "client": "The Adventure Kid",
+    "title": "Add your one-line project title here",
+    "industry": "",
+    "year": "",
+    "metricBold": "",
+    "metricText": "",
+    "summary": "Add one sentence on your role and what you delivered.",
+    "tags": [
+      "Branding",
+      "Visual design"
+    ],
+    "cats": [
+      "brand"
+    ],
+    "colors": {
+      "a": "#F4A261",
+      "b": "#2D6A4F",
+      "base": "#17301F"
+    },
+    "image": "",
+    "url": "",
+    "featured": true,
+    "case": {
+      "enabled": false,
+      "role": "",
+      "sub": "",
+      "badge": "",
+      "liveLabel": "",
+      "liveUrl": "",
+      "quote": {
+        "text": "",
+        "by": ""
+      },
+      "gallery": [],
+      "brief": {
+        "lead": "",
+        "text": ""
+      },
+      "process": {
+        "intro": "",
+        "phases": [],
+        "caption": ""
+      },
+      "challenge": {
+        "text": "",
+        "image": "",
+        "caption": ""
+      },
+      "stats": [],
+      "questions": [],
+      "insights": [],
+      "identity": {
+        "text": "",
+        "image": "",
+        "caption": ""
+      },
+      "identityExtras": [],
+      "website": {
+        "intro": ""
+      },
+      "slides": [],
+      "campaign": {
+        "intro": "",
+        "caption": ""
+      },
+      "posts": [],
+      "outcomes": [],
+      "closing": {
+        "text": "",
+        "ctaLabel": "",
+        "ctaUrl": ""
+      }
+    }
+  }
+];
+
+}
+</script>
 <script>
 (function () {
   "use strict";
@@ -671,6 +965,255 @@ figcaption, .cap { margin-top: 10px; font-size: 12px; color: var(--faint); }
       else done();
     });
   });
+
+  /* ---------- Data-driven projects (projects-data.js) ---------- */
+  var DATA = (window.PORTFOLIO_PROJECTS || []).filter(function (p) { return p && (p.title || p.client); });
+  var CATS = window.PORTFOLIO_CATEGORIES || [];
+  var POS = [["15% 15%", "90% 85%"], ["85% 20%", "10% 90%"], ["20% 20%", "90% 90%"], ["80% 15%", "10% 90%"]];
+  function mk(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null && text !== "") n.textContent = text; return n; }
+  function col(c, f) { return /^#[0-9a-f]{3,8}$/i.test(c || "") ? c : f; }
+  function safeUrl(u) { u = String(u || "").trim(); return /^(javascript|data|vbscript):/i.test(u) ? "" : u; }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (ch) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]; }); }
+  function slug(s) { return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, ""); }
+  function pid(p) { return p.id || slug(p.client || p.title); }
+  function hasCase(p) { return !!(p.case && p.case.enabled); }
+  function caseHref(p) { return safeUrl(p.url) || (hasCase(p) ? "case-study.html?p=" + encodeURIComponent(pid(p)) : ""); }
+  function coverBg(p, i) {
+    var c = p.colors || {}, pos = POS[i % POS.length];
+    return "radial-gradient(80% 90% at " + pos[0] + ", " + col(c.a, "#E9C46A") + " 0%, transparent 56%), radial-gradient(70% 80% at " + pos[1] + ", " + col(c.b, "#8A4B25") + " 0%, transparent 62%), " + col(c.base, "#1E1A14");
+  }
+  function makeCover(p, i) {
+    var c = mk("div", "cover");
+    c.style.setProperty("--bg-cover", coverBg(p, i));
+    var img = safeUrl(p.image);
+    if (img) {
+      var im = mk("img"); im.src = img; im.alt = (p.client || p.title) + " cover"; im.loading = "lazy";
+      im.onerror = function () { im.remove(); };
+      c.appendChild(im);
+    }
+    c.appendChild(mk("span", "mark", p.client || p.title));
+    return c;
+  }
+  function metaLine(p) { return [p.client, p.industry, p.year].filter(Boolean).join(" \u2022 "); }
+  function tagsEl(p) {
+    var t = mk("div", "tags");
+    (Array.isArray(p.tags) ? p.tags : []).forEach(function (x) { if (x) t.appendChild(mk("span", null, x)); });
+    return t;
+  }
+  function readEl(tag, url) {
+    var a = mk(tag, "read", "Read case study ");
+    if (url) a.href = url;
+    a.insertAdjacentHTML("beforeend", '<svg class="i"><use href="#i-right"/></svg>');
+    return a;
+  }
+  function makeCaseRow(p, i) {
+    var art = mk("article", "case"), cv = makeCover(p, i);
+    cv.setAttribute("data-reveal", ""); art.appendChild(cv);
+    var tx = mk("div"); tx.setAttribute("data-stagger", ".07");
+    tx.appendChild(mk("div", "meta", metaLine(p)));
+    tx.appendChild(mk("h3", null, p.title || p.client));
+    if (p.metricBold || p.metricText) {
+      var m = mk("p", "metric");
+      if (p.metricBold) m.appendChild(mk("strong", null, p.metricBold));
+      if (p.metricText) m.appendChild(document.createTextNode((p.metricBold ? " " : "") + p.metricText));
+      tx.appendChild(m);
+    }
+    if (p.summary) tx.appendChild(mk("p", "desc", p.summary));
+    tx.appendChild(tagsEl(p));
+    var u = caseHref(p); if (u) tx.appendChild(readEl("a", u));
+    art.appendChild(tx);
+    return art;
+  }
+  function makeProjCard(p, i) {
+    var art = mk("article", "proj"), u = caseHref(p), inner = u ? mk("a", "proj-in") : mk("div", "proj-in");
+    art.setAttribute("data-cats", (Array.isArray(p.cats) ? p.cats : []).join(" "));
+    if (u) inner.href = u;
+    inner.appendChild(makeCover(p, i));
+    inner.appendChild(mk("div", "meta", metaLine(p)));
+    inner.appendChild(mk("h3", null, p.title || p.client));
+    if (p.summary) inner.appendChild(mk("p", "desc", p.summary));
+    inner.appendChild(tagsEl(p));
+    if (u) inner.appendChild(readEl("span"));
+    art.appendChild(inner);
+    return art;
+  }
+  function featured() {
+    var f = DATA.filter(function (p) { return p.featured; });
+    return f.length ? f : DATA.slice(0, 4);
+  }
+  function stackItems() {
+    var out = featured().slice(0, 5).map(function (p) {
+      var c = p.colors || {};
+      return {
+        ico: "linear-gradient(135deg," + col(c.a, "#E9C46A") + "," + col(c.b, "#8A4B25") + ")",
+        ini: String(p.client || p.title || "V").charAt(0).toUpperCase(),
+        meta: [p.client, p.industry].filter(Boolean).join(" \u2022 "),
+        title: p.title || p.client
+      };
+    });
+    return out.length ? out : [{ ico: "linear-gradient(135deg,#E9C46A,#8A4B25)", ini: "V", meta: "Portfolio", title: "Add your first project" }];
+  }
+  window.PF = { cover: makeCover, card: makeProjCard, row: makeCaseRow, bg: coverBg };
+
+  var workList = $("#workList");
+  if (workList) featured().forEach(function (p) { workList.appendChild(makeCaseRow(p, DATA.indexOf(p))); });
+
+  var projGrid = $("#projGrid");
+  if (projGrid) {
+    DATA.forEach(function (p, i) { projGrid.appendChild(makeProjCard(p, i)); });
+    projGrid.setAttribute("data-stagger", ".08");
+    var fbox = $("#filters");
+    if (fbox) {
+      var used = {};
+      DATA.forEach(function (p) { (p.cats || []).forEach(function (c) { used[c] = 1; }); });
+      var list = [{ id: "all", label: "All" }].concat(CATS.filter(function (c) { return used[c.id]; }));
+      list.forEach(function (c, k) {
+        var b = mk("button", "fchip", c.label);
+        b.type = "button"; b.setAttribute("data-filter", c.id); b.setAttribute("aria-pressed", String(k === 0));
+        fbox.appendChild(b);
+      });
+      if (list.length < 3) fbox.style.display = "none";
+    }
+  }
+
+  /* ---------- Case study page (rendered from projects-data.js) ---------- */
+  var caseRoot = $("#caseRoot");
+  if (caseRoot) {
+    var ICONS = { check: "i-check", users: "i-users", star: "i-star", spark: "i-spark" };
+    var PHS = [["#EFE3C8", "#D9BE8A"], ["#E4E8DD", "#B9C4A9"], ["#E6E3EE", "#C4BEDB"], ["#F1DDD4", "#DDA894"], ["#DCE6EE", "#A9C0D4"]];
+    var svgi = function (id) { return '<svg class="i"><use href="#' + id + '"/></svg>'; };
+    var arr = function (a) { return Array.isArray(a) ? a : []; };
+    var txt = function (s) { return String(s == null ? "" : s).trim(); };
+    var paras = function (s) {
+      return txt(s).split(/\n{2,}/).map(function (x) { x = x.trim(); return x ? '<p data-reveal>' + esc(x).replace(/\n/g, "<br>") + "</p>" : ""; }).join("");
+    };
+    var shot = function (src, cap) {
+      var u = safeUrl(src); if (!u) return "";
+      return '<figure data-reveal><div class="card"><img class="shot" src="' + esc(u) + '" alt="' + esc(cap || "") + '" loading="lazy"></div>' + (cap ? "<figcaption>" + esc(cap) + "</figcaption>" : "") + "</figure>";
+    };
+    var framed = function (src, a, b, ar, label) {
+      var u = safeUrl(src), st = "--a:" + col(a, "#E8EBF4") + ";--b:" + col(b, "#D3DBEE") + (ar ? ";--ar:" + ar : "");
+      return '<div class="ph" style="' + st + '">' + (u ? '<img src="' + esc(u) + '" alt="' + esc(label || "") + '" loading="lazy">' : esc(label || "")) + "</div>";
+    };
+
+    var params = new URLSearchParams(location.search), wantId = params.get("p"), preview = params.get("preview") === "1";
+    var list = DATA, banner = "";
+    if (preview) {
+      try {
+        var dr = JSON.parse(localStorage.getItem("pfDraft") || "null");
+        if (dr && Array.isArray(dr.projects)) {
+          list = dr.projects.filter(function (p) { return p && (p.title || p.client); });
+          banner = '<div class="preview-banner">Preview of your unpublished draft</div>';
+        }
+      } catch (e) {}
+    }
+    var at = -1;
+    list.forEach(function (p, i) { if (at < 0 && wantId && pid(p) === wantId) at = i; });
+    if (at < 0 && !wantId) list.forEach(function (p, i) { if (at < 0 && hasCase(p)) at = i; });
+
+    if (at < 0) {
+      caseRoot.innerHTML = '<div class="wrap" style="padding:170px 0 80px"><h1 style="margin:0 0 14px">Project not found</h1><p class="lede">That case study does not exist yet.</p><a class="pill dark" href="projects.html">See all projects</a></div>';
+    } else {
+      var p = list[at], c = p.case || {}, title = p.title || p.client;
+      document.title = title + " \u00B7 Vignesh Balakumar";
+      var md = document.querySelector('meta[name="description"]');
+      if (md) md.setAttribute("content", txt(c.sub) || txt(p.summary) || title);
+
+      var facts = [["Year", p.year], ["Industry", p.industry], ["Role", c.role]].filter(function (f) { return txt(f[1]); })
+        .map(function (f) { return "<div><dt>" + f[0] + "</dt><dd>" + esc(f[1]) + "</dd></div>"; });
+      var live = safeUrl(c.liveUrl);
+      if (live) facts.push('<div><dt>Live site</dt><dd><a href="' + esc(live) + '" target="_blank" rel="noopener">' + esc(txt(c.liveLabel) || "Visit site") + " " + svgi("i-ext") + "</a></dd></div>");
+
+      var secs = [];
+      var q = c.quote || {}, gal = arr(c.gallery).filter(function (g) { return g && (txt(g.image) || txt(g.label)); });
+      if (txt(q.text) || gal.length) {
+        var h = '<h2 data-reveal>Overview</h2>';
+        if (txt(q.text)) h += '<div class="card quote-card" data-reveal><span class="q">\u201C</span><p>' + esc(q.text) + (txt(q.by) ? "<small>" + esc(q.by) + "</small>" : "") + "</p></div>";
+        if (gal.length === 1) {
+          h += '<figure data-reveal style="margin-top:16px"><div class="card">' + framed(gal[0].image, gal[0].a, gal[0].b, "", gal[0].label) + "</div>" + (txt(gal[0].caption) ? "<figcaption>" + esc(gal[0].caption) + "</figcaption>" : "") + "</figure>";
+        } else if (gal.length > 1) {
+          h += '<div class="viewer" id="viewer" data-reveal style="margin-top:16px"><div class="card"><div class="viewer-stage"><div class="ph sizer"></div>' +
+            gal.map(function (g, i) { var d = PHS[i % PHS.length]; return '<div class="panel">' + framed(g.image, g.a || d[0], g.b || d[1], "", g.label) + "</div>"; }).join("") +
+            '</div></div><div class="viewer-bar"><button class="pause" type="button" aria-label="Pause slideshow">' + svgi("i-pause") + '</button><div role="tablist" style="display:flex;gap:8px">' +
+            gal.map(function (g, i) { return '<button class="tab" role="tab" data-cap="' + esc(g.caption || "") + '">' + esc(txt(g.label) || "Image " + (i + 1)) + "</button>"; }).join("") +
+            '</div></div><p class="viewer-cap"></p></div>';
+        }
+        secs.push({ id: "overview", label: "Overview", cls: "sec", html: h });
+      }
+      var br = c.brief || {};
+      if (txt(br.lead) || txt(br.text)) secs.push({ id: "brief", label: "The brief", cls: "sec prose", html: (txt(br.lead) ? '<p class="lead" data-reveal>' + esc(br.lead) + "</p>" : "") + paras(br.text) });
+      var pr = c.process || {}, ph = arr(pr.phases).map(txt).filter(Boolean);
+      if (ph.length >= 4) {
+        secs.push({ id: "process", label: "Process", cls: "sec prose", html: '<h2 data-reveal>Process</h2>' + paras(pr.intro) +
+          '<div class="card pad" data-reveal><svg class="diamond" viewBox="0 0 640 220" role="img" aria-label="Process diagram: ' + esc(ph.slice(0, 4).join(", ")) + '">' +
+          '<path class="draw" pathLength="1" d="M20 110 L170 20 L320 110 L170 200 Z"/><path class="draw" pathLength="1" d="M320 110 L470 20 L620 110 L470 200 Z"/>' +
+          '<line class="dash" x1="170" y1="22" x2="170" y2="198"/><line class="dash" x1="470" y1="22" x2="470" y2="198"/>' +
+          '<circle cx="20" cy="110" r="4" fill="var(--card)"/><circle cx="320" cy="110" r="4" fill="var(--card)"/><circle cx="620" cy="110" r="4" fill="var(--card)"/>' +
+          '<text class="small" x="170" y="12">The problem</text><text class="small" x="470" y="12">The solution</text>' +
+          '<text x="98" y="114">' + esc(ph[0]) + '</text><text x="244" y="114">' + esc(ph[1]) + '</text><text x="398" y="114">' + esc(ph[2]) + '</text><text x="544" y="114">' + esc(ph[3]) + "</text></svg>" +
+          (txt(pr.caption) ? '<p class="cap" style="margin:6px 0 0">' + esc(pr.caption) + "</p>" : "") + "</div>" });
+      }
+      var ch = c.challenge || {};
+      if (txt(ch.text) || txt(ch.image)) secs.push({ id: "challenge", label: "The challenge", cls: "sec prose", html: "<h2 data-reveal>The challenge</h2>" + paras(ch.text) + shot(ch.image, ch.caption) });
+      var st = arr(c.stats).filter(function (s) { return s && txt(s.value); }), qs = arr(c.questions).map(txt).filter(Boolean);
+      if (st.length || qs.length) {
+        var rh = "<h2 data-reveal>Research</h2>";
+        if (st.length) rh += '<div class="card pad" data-reveal>' + st.map(function (s) {
+          var n = parseFloat(s.value), sf = txt(s.suffix);
+          var num = isNaN(n) ? "<b>" + esc(s.value) + esc(sf) + "</b>" : '<b data-count="' + n + '" data-suffix="' + esc(sf) + '">' + n + esc(sf) + "</b>";
+          return '<div class="stat">' + num + "<p>" + esc(s.label || "") + "</p></div>";
+        }).join("") + "</div>";
+        if (qs.length) rh += '<h3 data-reveal style="margin-top:36px">Questions we asked</h3><div class="card qs" data-reveal><ol data-stagger=".08">' + qs.map(function (x, i) { return "<li><em>" + (i + 1) + "</em>" + esc(x) + "</li>"; }).join("") + "</ol></div>";
+        secs.push({ id: "research", label: "Research", cls: "sec", html: rh });
+      }
+      var ins = arr(c.insights).filter(function (x) { return x && (txt(x.title) || txt(x.quote)); });
+      if (ins.length) secs.push({ id: "insights", label: "Insights", cls: "sec", html: '<h2 data-reveal>Insights</h2><div class="insights" data-stagger=".1">' + ins.map(function (x, i) {
+        return '<div class="card insight"><small>Insight ' + (i + 1) + "</small><h4>" + esc(x.title || "") + "</h4>" + (txt(x.quote) ? '<blockquote><span class="q">\u201C</span>' + esc(x.quote) + "</blockquote>" : "") + "</div>";
+      }).join("") + "</div>" });
+      var idn = c.identity || {}, ex = arr(c.identityExtras).filter(function (x) { return x && txt(x.image); });
+      if (txt(idn.text) || txt(idn.image) || ex.length) secs.push({ id: "identity", label: "Identity", cls: "sec prose", html: "<h2 data-reveal>Identity</h2>" + paras(idn.text) + shot(idn.image, idn.caption) +
+        (ex.length ? '<div class="grid2" data-stagger=".1">' + ex.map(function (x) { return shot(x.image, x.caption); }).join("") + "</div>" : "") });
+      var wb = c.website || {}, sl = arr(c.slides).filter(function (x) { return x && txt(x.image); });
+      if (txt(wb.intro) || sl.length) {
+        var wh = "<h2 data-reveal>Website visuals</h2>" + paras(wb.intro);
+        if (sl.length === 1) wh += shot(sl[0].image, sl[0].caption);
+        else if (sl.length > 1) wh += '<div class="slider" id="slider" data-reveal><div class="slider-view" tabindex="0" aria-label="Website visuals"><div class="slider-track">' +
+          sl.map(function (x) { return '<figure class="slide"><div class="card">' + framed(x.image, "", "", "", x.caption) + "</div>" + (txt(x.caption) ? "<figcaption>" + esc(x.caption) + "</figcaption>" : "") + "</figure>"; }).join("") +
+          '</div></div><div class="slider-ctl"><button class="prev" type="button" aria-label="Previous">' + svgi("i-left") + '</button><button class="next-btn primary" type="button" aria-label="Next">' + svgi("i-right") +
+          '</button><span class="count">01 / 01</span><span class="bar"><i></i></span></div></div>';
+        secs.push({ id: "website", label: "Website", cls: "sec prose", html: wh });
+      }
+      var cp = c.campaign || {}, po = arr(c.posts).filter(function (x) { return x && txt(x.image); });
+      if (txt(cp.intro) || po.length) secs.push({ id: "campaign", label: "Campaign", cls: "sec prose", html: "<h2 data-reveal>Social and campaign creatives</h2>" + paras(cp.intro) +
+        (po.length ? '<div class="grid3" data-stagger=".1">' + po.map(function (x) { return '<figure><div class="card">' + framed(x.image, "", "", "4/5", "") + "</div></figure>"; }).join("") + "</div>" : "") +
+        (txt(cp.caption) ? '<p class="cap" data-reveal>' + esc(cp.caption) + "</p>" : "") });
+      var oc = arr(c.outcomes).filter(function (x) { return x && (txt(x.title) || txt(x.text)); }), cl = c.closing || {}, cta = safeUrl(cl.ctaUrl);
+      if (oc.length || txt(cl.text) || cta) secs.push({ id: "outcomes", label: "Outcomes", cls: "sec prose", html: "<h2 data-reveal>Outcomes &amp; takeaways</h2>" +
+        (oc.length ? '<div class="outcomes" data-stagger=".09">' + oc.map(function (x) { return '<div class="card outcome"><span class="ico">' + svgi(ICONS[x.icon] || "i-check") + "</span><h4>" + esc(x.title || "") + "</h4><p>" + esc(x.text || "") + "</p></div>"; }).join("") + "</div>" : "") +
+        paras(cl.text) + (cta ? '<p data-reveal><a class="btn-dark" href="' + esc(cta) + '">' + esc(txt(cl.ctaLabel) || "Visit the live site") + " " + svgi("i-ext") + "</a></p>" : "") });
+
+      var nx = null;
+      for (var k = 1; k < list.length; k++) { var o = list[(at + k) % list.length]; if (caseHref(o) && o !== p) { nx = o; break; } }
+
+      var html = banner + '<header class="case-hero"><div class="grid-bg"></div><div class="wrap">' +
+        '<a class="back hero-in" href="projects.html">' + svgi("i-left") + "All work</a>" +
+        '<p class="meta hero-in" style="animation-delay:.08s">' + esc([p.client, p.industry].filter(Boolean).join(" \u00B7 ")) + "</p>" +
+        '<h1><span class="ln"><span style="--d:.12s">' + esc(title) + "</span></span></h1>" +
+        (txt(c.sub) || txt(p.summary) ? '<p class="sub hero-in" style="animation-delay:.45s">' + esc(txt(c.sub) || p.summary) + "</p>" : "") +
+        (txt(c.badge) ? '<span class="badge hero-in" style="animation-delay:.55s">' + svgi("i-shield") + esc(c.badge) + "</span>" : "") +
+        (facts.length ? '<dl class="facts-bar" data-reveal style="--d:.2s">' + facts.join("") + "</dl>" : "") +
+        '<div id="heroCoverSlot"></div></div></header><main>' +
+        (secs.length ? '<div class="wrap doc"><aside class="rail" aria-label="On this page"><ul>' + secs.map(function (s, i) { return '<li><a href="#' + s.id + '"' + (i === 0 ? ' class="on"' : "") + "><i></i><span>" + s.label + "</span></a></li>"; }).join("") + '</ul></aside><article class="content">' +
+          secs.map(function (s) { return '<section class="' + s.cls + '" id="' + s.id + '">' + s.html + "</section>"; }).join("") + "</article></div>" : "") +
+        (nx ? '<div class="wrap"><a class="next" href="' + esc(caseHref(nx)) + '" data-reveal><div><div class="meta">Next case study</div><h3>' + esc(nx.title || nx.client) + "</h3><p>" + esc(nx.summary || "") + '</p><span class="read">Read case study ' + svgi("i-right") + '</span></div><div id="nextCoverSlot"></div></a></div>' : "") +
+        "</main>";
+      caseRoot.innerHTML = html;
+      var slot = $("#heroCoverSlot"), cv = makeCover(p, DATA.indexOf(p) < 0 ? at : DATA.indexOf(p));
+      cv.classList.add("hero-cover"); cv.setAttribute("data-reveal", ""); cv.style.setProperty("--d", ".15s"); slot.replaceWith(cv);
+      var ns = $("#nextCoverSlot");
+      if (ns) ns.replaceWith(makeCover(nx, list.indexOf(nx)));
+    }
+  }
 
   /* ---------- Reveal on scroll, highlight draw, count-up ---------- */
   $$("[data-stagger]").forEach(function (box) {
@@ -819,12 +1362,7 @@ figcaption, .cap { margin-top: 10px; font-size: 12px; color: var(--faint); }
   /* ---------- Hero stacked carousel ---------- */
   var stack = $(".stack");
   if (stack) {
-    var items = [
-      { ico: "linear-gradient(135deg,#E9C46A,#8A4B25)", ini: "A", meta: "Acme Interiors \u2022 Rebrand", title: "Rebranding an interiors studio from logo to launch" },
-      { ico: "linear-gradient(135deg,#E5383B,#4A1517)", ini: "B", meta: "Braapstop Motorsport \u2022 Branding", title: "Add your featured project title here" },
-      { ico: "linear-gradient(135deg,#2EC4B6,#1B3A6B)", ini: "W", meta: "AS WE GO \u2022 Branding", title: "Add your featured project title here" },
-      { ico: "linear-gradient(135deg,#F4A261,#2D6A4F)", ini: "K", meta: "The Adventure Kid \u2022 Branding", title: "Add your featured project title here" }
-    ];
+    var items = stackItems();
     var idx = 0, card = $("#stackCard"), dotsEl = $("#dots");
     items.forEach(function (_, i) {
       var b = document.createElement("button");

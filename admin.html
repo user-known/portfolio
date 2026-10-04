@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Case study · Vignesh Balakumar</title>
-<meta name="description" content="Case study by Vignesh Balakumar.">
+<meta name="robots" content="noindex, nofollow">
+<title>Projects admin · Vignesh Balakumar</title>
 <meta name="theme-color" content="#FBFBF9">
 <script>document.documentElement.classList.add("js");</script>
 <link rel="preconnect" href="https://api.fontshare.com">
@@ -485,6 +485,78 @@ figcaption, .cap { margin-top: 10px; font-size: 12px; color: var(--faint); }
 .preview-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; text-align: center; padding: 8px; font-size: 12px; font-weight: 500; background: var(--btn); color: var(--btn-ink); }
 .adm-fields select, .adm-case select { width: 100%; font: inherit; font-size: 14px; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; }
 
+.adm-hero { padding-bottom: 20px; }
+.adm-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 22px; }
+.adm-bar .pill { font-size: 12.5px; padding: 9px 14px; }
+.adm-bar .chip { margin-right: 6px; }
+.adm-bar [hidden] { display: none; }
+.adm-msg { min-height: 1.4em; margin: 14px 0 0; font-size: 13px; color: var(--muted); }
+.adm-msg.ok { color: #2E8B57; }
+.adm-msg.err { color: #D64545; }
+.adm-pub { margin-top: 16px; }
+.adm-pub summary { cursor: pointer; font-size: 14px; font-weight: 500; }
+.adm-pub p { font-size: 13px; color: var(--muted); max-width: 70ch; line-height: 1.6; }
+.adm-pub code, .sub code { background: var(--chip); padding: 1px 6px; border-radius: 6px; font-size: .92em; }
+.adm { display: grid; grid-template-columns: 290px minmax(0,1fr); gap: 24px; margin-top: 24px; padding-bottom: 40px; align-items: start; }
+.adm-list { position: sticky; top: 90px; padding: 14px; }
+.adm-list-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; font-size: 14px; }
+.adm-list ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.adm-item { width: 100%; display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 12px; text-align: left; transition: background .2s; }
+.adm-item:hover { background: var(--chip); }
+.adm-item.on { background: var(--chip); box-shadow: inset 0 0 0 1.5px var(--ink); }
+.adm-thumb { width: 38px; height: 38px; border-radius: 9px; flex: none; }
+.adm-item-t { display: grid; min-width: 0; font-size: 13px; font-weight: 500; }
+.adm-item-t span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.adm-item-t small { font-weight: 400; color: var(--faint); font-size: 11px; }
+.adm-star { margin-left: auto; font-size: 12px; color: #D6A21E; }
+.adm-editor { display: grid; gap: 18px; }
+.adm-prev .proj-grid { grid-template-columns: minmax(0,440px); margin-top: 0; padding: 0; }
+.adm-fields { padding: 20px 22px; display: grid; gap: 16px; }
+.adm-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.adm-fields label.f { display: grid; gap: 6px; font-size: 12px; color: var(--muted); font-weight: 500; }
+.adm-fields label.f em { font-style: normal; font-weight: 400; color: var(--faint); }
+.adm-fields input[type="text"], .adm-fields input[type="password"], .adm-fields textarea, .adm-pub input[type="text"], .adm-pub input[type="password"], .adm-add input {
+  width: 100%; font: inherit; font-size: 14px; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; transition: border-color .2s, box-shadow .2s;
+}
+.adm-fields textarea { min-height: 80px; resize: vertical; line-height: 1.5; }
+.adm-fields input:focus, .adm-fields textarea:focus, .adm-pub input:focus, .adm-add input:focus { outline: none; border-color: var(--dot); box-shadow: 0 0 0 3px color-mix(in srgb, var(--dot) 25%, transparent); }
+.adm-colors { display: flex; gap: 14px; flex-wrap: wrap; }
+.adm-colors label { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); }
+.adm-colors input[type="color"] { width: 38px; height: 30px; padding: 0; border: 1px solid var(--line); border-radius: 8px; background: none; cursor: pointer; }
+.adm-checks { display: flex; flex-wrap: wrap; gap: 8px; }
+.adm-check { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: var(--chip); font-size: 12.5px; cursor: pointer; }
+.adm-add { display: flex; gap: 8px; margin-top: 10px; max-width: 360px; }
+.adm-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.adm-actions .pill { font-size: 12.5px; padding: 8px 13px; }
+.adm-actions .danger { color: #D64545; }
+.adm-img { display: flex; gap: 8px; align-items: center; }
+.adm-img input[type="file"] { display: none; }
+.hint { font-size: 12px; color: var(--faint); margin: 0; line-height: 1.5; }
+[hidden] { display: none !important; }
+.adm-tabs { display: flex; gap: 8px; }
+.adm-case { gap: 14px; }
+.adm-case-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.adm-sec { border: 1px solid var(--line); border-radius: 14px; background: var(--card); }
+.adm-sec > summary { cursor: pointer; padding: 12px 14px; font-size: 14px; font-weight: 500; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.adm-sec > summary::-webkit-details-marker { display: none; }
+.adm-sec > summary::after { content: "+"; font-weight: 400; color: var(--faint); transition: transform .25s; }
+.adm-sec[open] > summary::after { transform: rotate(45deg); }
+.adm-sec .cnt { font-weight: 400; font-size: 12px; color: var(--faint); margin-left: 6px; }
+.adm-sec-body { display: grid; gap: 12px; padding: 0 14px 14px; }
+.adm-box { display: grid; gap: 10px; padding: 12px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; }
+.adm-box-h { display: flex; align-items: center; justify-content: space-between; font-size: 12px; font-weight: 600; color: var(--muted); }
+.mini { padding: 4px 9px; font-size: 11px; border-radius: 8px; background: var(--chip); margin-left: 4px; }
+.mini.danger { color: #D64545; }
+.adm-note { font-size: 12px; color: var(--faint); margin: 0; line-height: 1.5; }
+.adm-sec label.f { display: grid; gap: 6px; font-size: 12px; color: var(--muted); font-weight: 500; }
+.adm-sec label.f em { font-style: normal; font-weight: 400; color: var(--faint); }
+.adm-sec input[type="text"], .adm-sec textarea { width: 100%; font: inherit; font-size: 14px; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; }
+.adm-sec textarea { min-height: 74px; resize: vertical; line-height: 1.5; }
+.adm-sec input[type="color"] { width: 44px; height: 32px; padding: 0; border: 1px solid var(--line); border-radius: 8px; background: none; cursor: pointer; }
+.adm-sec input:focus, .adm-sec textarea:focus, .adm-sec select:focus { outline: none; border-color: var(--dot); box-shadow: 0 0 0 3px color-mix(in srgb, var(--dot) 25%, transparent); }
+.adm-sec select { width: 100%; font: inherit; font-size: 14px; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; }
+.adm-sec .adm-img input[type="file"] { display: none; }
+@media (max-width: 900px) { .adm { grid-template-columns: 1fr; } .adm-list { position: static; } .adm-row { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body id="top">
@@ -510,12 +582,11 @@ figcaption, .cap { margin-top: 10px; font-size: 12px; color: var(--faint); }
   <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8Z"/></symbol>
 </svg>
 
-<div class="progress" id="progress" aria-hidden="true"></div>
 <nav class="nav" aria-label="Primary">
   <a class="avatar" href="index.html" aria-label="Home">V</a>
   <div class="links">
     <i class="indicator" aria-hidden="true"></i>
-    <a class="link active" href="index.html#work">Work</a>
+    <a class="link" href="index.html#work">Work</a>
     <a class="link" href="about.html">About</a>
     <a class="link opt" href="index.html#faq">FAQ</a>
   </div>
@@ -524,8 +595,118 @@ figcaption, .cap { margin-top: 10px; font-size: 12px; color: var(--faint); }
 </nav>
 
 
-<!-- This page is generated from projects-data.js. Open it as case-study.html?p=<project id>. Edit content in admin.html. -->
-<div id="caseRoot"><noscript><div class="wrap" style="padding:170px 0 80px">Please enable JavaScript to view this case study.</div></noscript></div>
+<header class="case-hero adm-hero">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <a class="back hero-in" href="index.html"><svg class="i"><use href="#i-left"/></svg>Back to site</a>
+    <h1 style="margin-top:26px"><span class="ln"><span style="--d:.1s">Projects <span class="hl">admin</span></span></span></h1>
+    <p class="sub hero-in" style="animation-delay:.35s">Add and edit projects here. The home and projects pages read one file, <code>projects-data.js</code>, so a change here updates both.</p>
+
+    <div class="adm-bar hero-in" style="animation-delay:.45s">
+      <span class="chip"><span class="dot"></span><span id="statusTxt">Matches the site</span></span>
+      <button class="pill dark" type="button" id="btnDownload"><svg class="i"><use href="#i-up"/></svg>Download file</button>
+      <button class="pill" type="button" id="btnCopy"><svg class="i"><use href="#i-copy"/></svg>Copy file</button>
+      <label class="pill" style="cursor:pointer">Import file<input type="file" id="btnImport" accept=".js,.json,text/javascript,application/json" hidden></label>
+      <button class="pill" type="button" id="discard" hidden>Discard draft</button>
+    </div>
+    <p class="adm-msg" id="msg" role="status" aria-live="polite"></p>
+
+    <details class="card pad adm-pub" id="pub">
+      <summary>Publish straight to GitHub (optional)</summary>
+      <p>Without this, download the file and replace <code>projects-data.js</code> in your repository. With it, the button below commits the file for you. Create a fine-grained token at GitHub &rarr; Settings &rarr; Developer settings, limited to this one repository with <strong>Contents: Read and write</strong>. The token goes only to api.github.com and is not saved unless you tick the box.</p>
+      <div class="adm-row" style="margin-bottom:12px">
+        <label class="f">Owner <input type="text" id="ghOwner" placeholder="your-username" autocomplete="off"></label>
+        <label class="f">Repository <input type="text" id="ghRepo" placeholder="portfolio" autocomplete="off"></label>
+      </div>
+      <div class="adm-row" style="margin-bottom:12px">
+        <label class="f">Branch <input type="text" id="ghBranch" value="main" autocomplete="off"></label>
+        <label class="f">Token <input type="password" id="ghToken" autocomplete="off" placeholder="github_pat_..."></label>
+      </div>
+      <label class="adm-check" style="margin-bottom:12px"><input type="checkbox" id="ghRemember"> Remember the token on this device</label><br>
+      <button class="pill dark" type="button" id="btnPublish"><svg class="i"><use href="#i-up"/></svg>Publish to GitHub</button>
+    </details>
+  </div>
+</header>
+
+<main>
+  <div class="wrap adm">
+    <aside class="card adm-list" aria-label="Projects">
+      <div class="adm-list-head"><b>Projects</b><button class="pill dark" type="button" id="btnNew" style="padding:6px 12px;font-size:12px"><svg class="i"><use href="#i-plus"/></svg>New</button></div>
+      <ul id="list"></ul>
+    </aside>
+
+    <section class="adm-editor" aria-label="Edit project">
+      <div class="adm-prev">
+        <p class="hint" style="margin-bottom:10px">Preview (how the card looks on the projects page)</p>
+        <div class="proj-grid" id="preview"></div>
+      </div>
+
+      <div class="adm-tabs" role="group" aria-label="Editor sections">
+        <button class="fchip" type="button" data-tab="card" aria-pressed="true">Project card</button>
+        <button class="fchip" type="button" data-tab="case" aria-pressed="false">Case study page</button>
+      </div>
+
+      <div class="card adm-fields adm-case" id="caseEditor" hidden>
+        <div class="adm-case-top">
+          <label class="adm-check"><input type="checkbox" id="caseOn"> Show a case study page for this project</label>
+          <button class="pill" type="button" id="btnPreviewCase"><svg class="i"><use href="#i-ext"/></svg>Preview page</button>
+        </div>
+        <p class="adm-note">The page is built from the sections below. A section with nothing in it is left out, so fill in only what you need. Images use a path such as <code>images/acme-logo.jpg</code>, or upload with GitHub connected. The title, client, industry, year and cover come from the Project card tab.</p>
+        <div id="caseForm" style="display:grid;gap:10px"></div>
+      </div>
+
+      <div class="card adm-fields" id="editor">
+        <div class="adm-row">
+          <label class="f">Client or project name <input type="text" data-f="client" placeholder="Acme Interiors"></label>
+          <label class="f">Industry <input type="text" data-f="industry" placeholder="Interiors"></label>
+        </div>
+        <label class="f">Title <em>One line that says what you did</em> <input type="text" data-f="title" placeholder="Rebranding an interiors studio from logo to launch"></label>
+        <label class="f">Summary <textarea data-f="summary" placeholder="One or two sentences on your role and what you delivered."></textarea></label>
+        <div class="adm-row">
+          <label class="f">Headline result <em>Bold part, optional</em> <input type="text" data-f="metricBold" placeholder="Full identity system"></label>
+          <label class="f">Supporting detail <em>Optional</em> <input type="text" data-f="metricText" placeholder="logo, website visuals and campaigns"></label>
+        </div>
+        <div class="adm-row">
+          <label class="f">Page name <em>Used in the case study link</em> <input type="text" data-f="id" placeholder="acme-interiors"></label>
+          <label class="f">Year <input type="text" data-f="year" placeholder="2026"></label>
+        </div>
+        <div class="adm-row">
+          <label class="f">Tags <em>Comma separated</em> <input type="text" data-f="tags" placeholder="Brand identity, Logo design"></label>
+        </div>
+        <div>
+          <div class="hint" style="margin-bottom:8px">Categories (used by the filter chips)</div>
+          <div class="adm-checks" id="catBox"></div>
+          <div class="adm-add"><input type="text" id="newCat" placeholder="New category, e.g. Motion"><button class="pill" type="button" id="btnCat">Add</button></div>
+        </div>
+        <div class="adm-row">
+          <label class="f">Custom link <em>Optional. Overrides the case study page.</em> <input type="text" data-f="url" placeholder="https://..."></label>
+          <div>
+            <label class="f">Cover image path <em>Leave empty for the gradient cover</em> <input type="text" data-f="image" placeholder="images/acme.jpg"></label>
+            <div class="adm-img" style="margin-top:8px">
+              <label class="pill" style="cursor:pointer;font-size:12px;padding:7px 12px">Upload image<input type="file" id="imgFile" accept="image/*"></label>
+              <span class="hint">Uploads need the GitHub details above.</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="hint" style="margin-bottom:8px">Gradient cover colours</div>
+          <div class="adm-colors">
+            <label>Light <input type="color" data-c="a"></label>
+            <label>Accent <input type="color" data-c="b"></label>
+            <label>Base <input type="color" data-c="base"></label>
+          </div>
+        </div>
+        <label class="adm-check" style="justify-self:start"><input type="checkbox" data-f="featured"> Show on the home page (Selected work)</label>
+        <div class="adm-actions">
+          <button class="pill" type="button" id="btnUp"><svg class="i" style="transform:rotate(0)"><use href="#i-up"/></svg>Move up</button>
+          <button class="pill" type="button" id="btnDown"><svg class="i"><use href="#i-down"/></svg>Move down</button>
+          <button class="pill" type="button" id="btnDup"><svg class="i"><use href="#i-copy"/></svg>Duplicate</button>
+          <button class="pill danger" type="button" id="btnDel">Delete</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
 
 <footer>
   <div class="grid-bg bottom"></div>
@@ -1529,6 +1710,413 @@ window.PORTFOLIO_PROJECTS = [
   }
 })();
 
+</script>
+<script>
+(function () {
+  "use strict";
+  var LS = "pfDraft", GH = "pfGh";
+  function $(s, c) { return (c || document).querySelector(s); }
+  function $$(s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); }
+  var PF = window.PF, cats, projects, sel = 0, hasDraft = false, saveT = null;
+
+  function clone(o) { return JSON.parse(JSON.stringify(o)); }
+  function slug(s) { return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, ""); }
+  function defaultCase() {
+    return { enabled: false, role: "", sub: "", badge: "", liveLabel: "", liveUrl: "", quote: { text: "", by: "" }, gallery: [], brief: { lead: "", text: "" },
+      process: { intro: "", phases: [], caption: "" }, challenge: { text: "", image: "", caption: "" }, stats: [], questions: [], insights: [],
+      identity: { text: "", image: "", caption: "" }, identityExtras: [], website: { intro: "" }, slides: [], campaign: { intro: "", caption: "" }, posts: [],
+      outcomes: [], closing: { text: "", ctaLabel: "", ctaUrl: "" } };
+  }
+  function merge(def, obj) {
+    if (!obj || typeof obj !== "object" || Array.isArray(obj)) return def;
+    Object.keys(def).forEach(function (k) {
+      var d = def[k];
+      if (d && typeof d === "object" && !Array.isArray(d)) def[k] = merge(d, obj[k]);
+      else if (obj[k] !== undefined) def[k] = obj[k];
+    });
+    return def;
+  }
+  function ensureCase(p) { p.case = merge(defaultCase(), p.case); }
+  function getP(o, path) { return path.split(".").reduce(function (a, k) { return a == null ? a : a[k]; }, o); }
+  function setP(o, path, val) {
+    var ks = path.split("."), last = ks.pop();
+    var cur = ks.reduce(function (a, k) { if (a[k] == null) a[k] = /^\d+$/.test(k) ? [] : {}; return a[k]; }, o);
+    cur[last] = val;
+  }
+  function blank() {
+    return { id: "", client: "", title: "New project", industry: "", year: String(new Date().getFullYear()), metricBold: "", metricText: "", summary: "", tags: [], cats: [], colors: { a: "#E9C46A", b: "#8A4B25", base: "#1E1A14" }, image: "", url: "", featured: false, case: defaultCase() };
+  }
+  function hex6(c) {
+    c = String(c || "");
+    if (/^#[0-9a-f]{6}$/i.test(c)) return c;
+    if (/^#[0-9a-f]{3}$/i.test(c)) return "#" + c[1] + c[1] + c[2] + c[2] + c[3] + c[3];
+    return "#000000";
+  }
+  function say(text, kind) { var m = $("#msg"); m.textContent = text; m.className = "adm-msg" + (kind ? " " + kind : ""); }
+
+  function load() {
+    var d = null;
+    try { d = JSON.parse(localStorage.getItem(LS) || "null"); } catch (e) {}
+    if (d && Array.isArray(d.projects) && Array.isArray(d.cats)) { cats = d.cats; projects = d.projects; hasDraft = true; }
+    else { cats = clone(window.PORTFOLIO_CATEGORIES || []); projects = clone(window.PORTFOLIO_PROJECTS || []); }
+    if (!projects.length) projects.push(blank());
+    projects.forEach(ensureCase);
+  }
+  function status() {
+    $("#statusTxt").textContent = hasDraft ? "Unpublished changes (saved in this browser)" : "Matches the site";
+    $("#discard").hidden = !hasDraft;
+  }
+  function persist() {
+    clearTimeout(saveT);
+    hasDraft = true; status();
+    saveT = setTimeout(function () { try { localStorage.setItem(LS, JSON.stringify({ cats: cats, projects: projects })); } catch (e) {} }, 250);
+  }
+
+  function renderList() {
+    var ul = $("#list"); ul.innerHTML = "";
+    projects.forEach(function (p, i) {
+      var li = document.createElement("li"), b = document.createElement("button");
+      b.type = "button"; b.className = "adm-item" + (i === sel ? " on" : "");
+      var th = document.createElement("span"); th.className = "adm-thumb"; th.style.background = PF.bg(p, i);
+      var tx = document.createElement("span"); tx.className = "adm-item-t";
+      var a = document.createElement("span"); a.textContent = p.title || p.client || "Untitled";
+      var s = document.createElement("small"); s.textContent = p.client || "";
+      tx.appendChild(a); tx.appendChild(s);
+      b.appendChild(th); b.appendChild(tx);
+      if (p.featured) { var st = document.createElement("span"); st.className = "adm-star"; st.textContent = "\u2605"; st.title = "On the home page"; b.appendChild(st); }
+      b.addEventListener("click", function () { sel = i; renderAll(); });
+      li.appendChild(b); ul.appendChild(li);
+    });
+  }
+  function renderPreview() {
+    var box = $("#preview"); box.innerHTML = "";
+    box.appendChild(PF.card(projects[sel], sel));
+    $$("a", box).forEach(function (a) { a.addEventListener("click", function (e) { e.preventDefault(); }); });
+  }
+  function renderCats() {
+    var box = $("#catBox"), p = projects[sel]; box.innerHTML = "";
+    cats.forEach(function (c) {
+      var l = document.createElement("label"); l.className = "adm-check";
+      var i = document.createElement("input"); i.type = "checkbox"; i.dataset.cat = c.id; i.checked = (p.cats || []).indexOf(c.id) > -1;
+      l.appendChild(i); l.appendChild(document.createTextNode(" " + c.label)); box.appendChild(l);
+    });
+  }
+  var FIELDS = ["id", "client", "title", "industry", "year", "metricBold", "metricText", "summary", "url", "image"];
+  function fill() {
+    var p = projects[sel];
+    FIELDS.forEach(function (k) { $('[data-f="' + k + '"]').value = p[k] || ""; });
+    $('[data-f="tags"]').value = (p.tags || []).join(", ");
+    $('[data-f="featured"]').checked = !!p.featured;
+    ["a", "b", "base"].forEach(function (k) { $('[data-c="' + k + '"]').value = hex6((p.colors || {})[k]); });
+    renderCats();
+  }
+  function renderAll() { renderList(); fill(); renderPreview(); renderCaseForm(); }
+
+  $("#editor").addEventListener("input", function (e) {
+    var t = e.target, p = projects[sel];
+    if (t.dataset.f) {
+      var k = t.dataset.f;
+      if (k === "tags") p.tags = t.value.split(",").map(function (x) { return x.trim(); }).filter(Boolean);
+      else if (k === "featured") p.featured = t.checked;
+      else p[k] = t.value;
+    } else if (t.dataset.c) { p.colors = p.colors || {}; p.colors[t.dataset.c] = t.value; }
+    else if (t.dataset.cat) {
+      p.cats = p.cats || [];
+      var at = p.cats.indexOf(t.dataset.cat);
+      if (t.checked && at < 0) p.cats.push(t.dataset.cat);
+      if (!t.checked && at > -1) p.cats.splice(at, 1);
+    } else return;
+    renderList(); renderPreview(); persist();
+  });
+
+  $("#btnCat").addEventListener("click", function () {
+    var inp = $("#newCat"), label = inp.value.trim(), id = slug(label);
+    if (!id) return;
+    if (!cats.some(function (c) { return c.id === id; })) cats.push({ id: id, label: label });
+    var p = projects[sel]; p.cats = p.cats || [];
+    if (p.cats.indexOf(id) < 0) p.cats.push(id);
+    inp.value = ""; renderCats(); renderPreview(); persist();
+  });
+  $("#newCat").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); $("#btnCat").click(); } });
+
+  $("#btnNew").addEventListener("click", function () { projects.push(blank()); sel = projects.length - 1; renderAll(); persist(); $('[data-f="client"]').focus(); });
+  $("#btnDup").addEventListener("click", function () { var c = clone(projects[sel]); c.id = ""; c.title = (c.title || "Untitled") + " (copy)"; projects.splice(sel + 1, 0, c); sel++; renderAll(); persist(); });
+  $("#btnDel").addEventListener("click", function () {
+    if (!confirm("Delete this project? You can still discard the draft to get it back.")) return;
+    projects.splice(sel, 1); if (!projects.length) projects.push(blank());
+    sel = Math.min(sel, projects.length - 1); renderAll(); persist();
+  });
+  function move(d) {
+    var j = sel + d; if (j < 0 || j >= projects.length) return;
+    var t = projects[sel]; projects[sel] = projects[j]; projects[j] = t; sel = j; renderAll(); persist();
+  }
+  $("#btnUp").addEventListener("click", function () { move(-1); });
+  $("#btnDown").addEventListener("click", function () { move(1); });
+  $("#discard").addEventListener("click", function () {
+    if (!confirm("Discard your unpublished changes and go back to what the site has?")) return;
+    try { localStorage.removeItem(LS); } catch (e) {}
+    hasDraft = false; sel = 0; load(); hasDraft = false; status(); renderAll(); say("Draft discarded.", "ok");
+  });
+
+  /* ----- File export / import ----- */
+  function finalize() {
+    var seen = {};
+    projects.forEach(function (p) {
+      var base = slug(p.id || p.client || p.title) || "project", id = base, n = 2;
+      while (seen[id]) id = base + "-" + (n++);
+      seen[id] = 1; p.id = id; p.tags = p.tags || []; p.cats = p.cats || []; ensureCase(p);
+    });
+  }
+  function fileText() {
+    finalize();
+    return "/* Portfolio data. Edit with admin.html, or by hand.\n   Keep the two assignments below; the site reads them on every page.\n   Generated " + new Date().toISOString().slice(0, 10) + ". */\n" +
+      "window.PORTFOLIO_CATEGORIES = " + JSON.stringify(cats, null, 2) + ";\n" +
+      "window.PORTFOLIO_PROJECTS = " + JSON.stringify(projects, null, 2) + ";\n";
+  }
+  window.__pfFileText = fileText;
+  $("#btnDownload").addEventListener("click", function () {
+    var blob = new Blob([fileText()], { type: "text/javascript" }), a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = "projects-data.js"; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+    say("Downloaded. Replace projects-data.js in your repository with this file.", "ok");
+  });
+  $("#btnCopy").addEventListener("click", function () {
+    var txt = fileText();
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(function () { say("Copied the file contents.", "ok"); }, function () { say("Couldn't copy. Use Download file instead.", "err"); });
+    else say("Couldn't copy. Use Download file instead.", "err");
+  });
+  $("#btnImport").addEventListener("change", function (e) {
+    var f = e.target.files[0]; if (!f) return;
+    var r = new FileReader();
+    r.onload = function () {
+      var m = /window\.PORTFOLIO_CATEGORIES\s*=\s*(\[[\s\S]*?\]);\s*window\.PORTFOLIO_PROJECTS\s*=\s*(\[[\s\S]*\]);?\s*$/.exec(String(r.result));
+      try {
+        if (!m) throw new Error("format");
+        var c = JSON.parse(m[1]), p = JSON.parse(m[2]);
+        if (!Array.isArray(c) || !Array.isArray(p)) throw new Error("format");
+        cats = c; projects = p.length ? p : [blank()]; sel = 0; renderAll(); persist(); say("Imported " + projects.length + " projects.", "ok");
+      } catch (err) { say("Couldn't read that file. Use a projects-data.js generated by this page.", "err"); }
+      e.target.value = "";
+    };
+    r.readAsText(f);
+  });
+
+  /* ----- GitHub publish ----- */
+  function loadGh() {
+    var g = null; try { g = JSON.parse(localStorage.getItem(GH) || "null"); } catch (e) {}
+    if (!g) return;
+    $("#ghOwner").value = g.owner || ""; $("#ghRepo").value = g.repo || ""; $("#ghBranch").value = g.branch || "main";
+    if (g.token) { $("#ghToken").value = g.token; $("#ghRemember").checked = true; }
+  }
+  function creds() {
+    var c = { owner: $("#ghOwner").value.trim(), repo: $("#ghRepo").value.trim(), branch: $("#ghBranch").value.trim() || "main", token: $("#ghToken").value.trim() };
+    var keep = { owner: c.owner, repo: c.repo, branch: c.branch };
+    if ($("#ghRemember").checked) keep.token = c.token;
+    try { localStorage.setItem(GH, JSON.stringify(keep)); } catch (e) {}
+    return c;
+  }
+  function b64(str) { return btoa(unescape(encodeURIComponent(str))); }
+  async function errText(r) {
+    var m = ""; try { m = (await r.json()).message; } catch (e) {}
+    if (r.status === 401) return "GitHub rejected the token (401). Check it is correct and has not expired.";
+    if (r.status === 403) return "GitHub refused the request (403). The token needs Contents: Read and write on this repository.";
+    if (r.status === 404) return "Repository or branch not found (404). Check the owner, repository and branch.";
+    return "GitHub error " + r.status + (m ? ": " + m : "");
+  }
+  async function putFile(c, path, contentB64, message) {
+    var url = "https://api.github.com/repos/" + encodeURIComponent(c.owner) + "/" + encodeURIComponent(c.repo) + "/contents/" + path.split("/").map(encodeURIComponent).join("/");
+    var headers = { Accept: "application/vnd.github+json", Authorization: "Bearer " + c.token, "X-GitHub-Api-Version": "2022-11-28" };
+    var sha, g = await fetch(url + "?ref=" + encodeURIComponent(c.branch), { headers: headers });
+    if (g.status === 200) sha = (await g.json()).sha;
+    else if (g.status !== 404) throw new Error(await errText(g));
+    var body = { message: message, content: contentB64, branch: c.branch };
+    if (sha) body.sha = sha;
+    var r = await fetch(url, { method: "PUT", headers: Object.assign({ "Content-Type": "application/json" }, headers), body: JSON.stringify(body) });
+    if (!r.ok) throw new Error(await errText(r));
+  }
+  function needCreds() {
+    var c = creds();
+    if (!c.owner || !c.repo || !c.token) { $("#pub").open = true; say("Fill in the owner, repository and token under \u201CPublish straight to GitHub\u201D first.", "err"); return null; }
+    return c;
+  }
+  $("#btnPublish").addEventListener("click", async function () {
+    var c = needCreds(); if (!c) return;
+    var btn = this; btn.disabled = true; say("Publishing\u2026");
+    try {
+      await putFile(c, "projects-data.js", b64(fileText()), "Update projects via admin");
+      try { localStorage.removeItem(LS); } catch (e) {}
+      hasDraft = false; status();
+      say("Published. GitHub Pages usually shows the change within a minute or two.", "ok");
+    } catch (err) { say(err.message || "Publishing failed.", "err"); }
+    btn.disabled = false;
+  });
+  async function uploadImage(f) {
+    if (!f) return null;
+    if (!/^image\//.test(f.type)) { say("Choose an image file.", "err"); return null; }
+    var c = needCreds(); if (!c) return null;
+    var name = f.name.toLowerCase().replace(/[^a-z0-9._-]+/g, "-");
+    say("Uploading " + name + "\u2026");
+    try {
+      var data = await new Promise(function (res, rej) { var r = new FileReader(); r.onload = function () { res(String(r.result).split(",")[1]); }; r.onerror = rej; r.readAsDataURL(f); });
+      await putFile(c, "images/" + name, data, "Add image " + name);
+      say("Uploaded to images/" + name + (f.size > 1500000 ? ". It is large, so consider compressing it." : ".") + " Publish the file too so the site uses it.", "ok");
+      return "images/" + name;
+    } catch (err) { say(err.message || "Upload failed.", "err"); return null; }
+  }
+  $("#imgFile").addEventListener("change", async function (e) {
+    var url = await uploadImage(e.target.files[0]);
+    if (url) { projects[sel].image = url; fill(); renderList(); renderPreview(); persist(); }
+    e.target.value = "";
+  });
+
+  /* ----- Case study editor ----- */
+  var PHS = [["#EFE3C8", "#D9BE8A"], ["#E4E8DD", "#B9C4A9"], ["#E6E3EE", "#C4BEDB"], ["#F1DDD4", "#DDA894"], ["#DCE6EE", "#A9C0D4"]];
+  var IMG = { k: "image", l: "Image", t: "image", ph: "images/example.jpg" };
+  var SCHEMA = [
+    { key: "", type: "object", title: "Header", open: true, fields: [
+      { k: "role", l: "Your role", ph: "Creative & Graphic Designer" },
+      { k: "sub", l: "One-line summary", t: "textarea", ph: "What you did, in a sentence. Falls back to the card summary." },
+      { k: "badge", l: "Result or quote badge", h: "Optional", ph: "A one-line result or client quote" },
+      { k: "liveLabel", l: "Live site label", h: "Optional", ph: "acme.com" },
+      { k: "liveUrl", l: "Live site link", h: "Optional", ph: "https://..." } ] },
+    { key: "quote", type: "object", title: "Overview: quote", fields: [
+      { k: "text", l: "Quote", t: "textarea" }, { k: "by", l: "Who said it", ph: "Client name, role" } ] },
+    { key: "gallery", type: "list", title: "Overview: image tabs", item: "Tab", note: "One image shows as a plain picture. Two or more become a tabbed slideshow.", fields: [
+      { k: "label", l: "Tab label", ph: "Logo" }, { k: "caption", l: "Caption", ph: "What this shows" }, IMG,
+      { k: "a", l: "Fallback colour (light)", t: "color", def: "#E8EBF4" }, { k: "b", l: "Fallback colour (dark)", t: "color", def: "#D3DBEE" } ] },
+    { key: "brief", type: "object", title: "The brief", fields: [
+      { k: "lead", l: "The brief in one sentence", ph: "The brief: ..." }, { k: "text", l: "More detail", t: "textarea", h: "Blank line = new paragraph" } ] },
+    { key: "process", type: "object", title: "Process diagram", fields: [
+      { k: "intro", l: "Intro", t: "textarea" },
+      { k: "phases", l: "Four phases, one per line", t: "lines", h: "Leave empty to hide the diagram", ph: "Discover\nDefine\nDevelop\nDeliver" },
+      { k: "caption", l: "Caption" } ] },
+    { key: "challenge", type: "object", title: "The challenge", fields: [
+      { k: "text", l: "The challenge", t: "textarea" }, IMG, { k: "caption", l: "Image caption" } ] },
+    { key: "stats", type: "list", title: "Research: numbers", item: "Number", note: "Numbers count up when scrolled into view.", fields: [
+      { k: "value", l: "Number", ph: "12" }, { k: "suffix", l: "Suffix", ph: "% or x", h: "Optional" }, { k: "label", l: "What it means", t: "textarea" } ] },
+    { key: "questions", type: "lines", title: "Research: questions", l: "One question per line" },
+    { key: "insights", type: "list", title: "Insights", item: "Insight", fields: [
+      { k: "title", l: "Insight" }, { k: "quote", l: "Supporting quote or note", t: "textarea" } ] },
+    { key: "identity", type: "object", title: "Identity", fields: [
+      { k: "text", l: "Text", t: "textarea" }, IMG, { k: "caption", l: "Image caption" } ] },
+    { key: "identityExtras", type: "list", title: "Identity: extra images", item: "Image", note: "Shown side by side under the main image.", fields: [IMG, { k: "caption", l: "Caption" }] },
+    { key: "website", type: "object", title: "Website visuals: intro", fields: [{ k: "intro", l: "Intro", t: "textarea" }] },
+    { key: "slides", type: "list", title: "Website visuals: slides", item: "Slide", note: "One image shows as a plain picture. Two or more become a slider.", fields: [IMG, { k: "caption", l: "Caption" }] },
+    { key: "campaign", type: "object", title: "Campaign: intro and caption", fields: [{ k: "intro", l: "Intro", t: "textarea" }, { k: "caption", l: "Caption under the images" }] },
+    { key: "posts", type: "list", title: "Campaign: images", item: "Image", fields: [IMG] },
+    { key: "outcomes", type: "list", title: "Outcomes: cards", item: "Card", fields: [
+      { k: "icon", l: "Icon", t: "select", opts: [["check", "Check"], ["users", "People"], ["star", "Star"], ["spark", "Spark"]] },
+      { k: "title", l: "Title" }, { k: "text", l: "Text", t: "textarea" } ] },
+    { key: "closing", type: "object", title: "Outcomes: closing", fields: [
+      { k: "text", l: "Closing paragraphs", t: "textarea", h: "Blank line = new paragraph" },
+      { k: "ctaLabel", l: "Button label", ph: "Visit the live site" }, { k: "ctaUrl", l: "Button link", ph: "https://..." } ] }
+  ];
+  var openSecs = { "": true };
+
+  function fieldEl(f, path, val) {
+    var wrap = document.createElement("div"), lab = document.createElement("label"); lab.className = "f";
+    var sp = document.createElement("span"); sp.textContent = f.l;
+    if (f.h) { var em = document.createElement("em"); em.textContent = " " + f.h; sp.appendChild(em); }
+    lab.appendChild(sp);
+    var inp;
+    if (f.t === "textarea" || f.t === "lines") {
+      inp = document.createElement("textarea");
+      if (f.t === "lines") { inp.value = (val || []).join("\n"); inp.dataset.lines = "1"; } else inp.value = val || "";
+    } else if (f.t === "select") {
+      inp = document.createElement("select");
+      f.opts.forEach(function (o) { var op = document.createElement("option"); op.value = o[0]; op.textContent = o[1]; inp.appendChild(op); });
+      inp.value = val || f.opts[0][0];
+    } else if (f.t === "color") {
+      inp = document.createElement("input"); inp.type = "color"; inp.value = hex6(val || f.def);
+    } else { inp = document.createElement("input"); inp.type = "text"; inp.value = val || ""; }
+    if (f.ph && f.t !== "color") inp.placeholder = f.ph;
+    inp.dataset.path = path; lab.appendChild(inp); wrap.appendChild(lab);
+    if (f.t === "image") {
+      var row = document.createElement("div"); row.className = "adm-img"; row.style.marginTop = "6px";
+      var up = document.createElement("label"); up.className = "pill"; up.style.cssText = "cursor:pointer;font-size:12px;padding:6px 11px";
+      up.appendChild(document.createTextNode("Upload image"));
+      var fi = document.createElement("input"); fi.type = "file"; fi.accept = "image/*"; fi.dataset.upload = path; up.appendChild(fi);
+      row.appendChild(up); wrap.appendChild(row);
+    }
+    return wrap;
+  }
+  function btn(text, act, key, i, cls) {
+    var b = document.createElement("button"); b.type = "button"; b.className = "mini" + (cls ? " " + cls : ""); b.textContent = text;
+    b.dataset.act = act; b.dataset.key = key; if (i != null) b.dataset.i = i; return b;
+  }
+  function renderCaseForm() {
+    var c = projects[sel].case, box = $("#caseForm"); box.innerHTML = "";
+    $("#caseOn").checked = !!c.enabled;
+    SCHEMA.forEach(function (s) {
+      var d = document.createElement("details"); d.className = "adm-sec"; d.dataset.key = s.key; if (openSecs[s.key] || (s.open && openSecs[s.key] === undefined)) d.open = true;
+      var sm = document.createElement("summary"), nm = document.createElement("span"); nm.textContent = s.title;
+      var data = s.key ? getP(c, s.key) : null;
+      if (s.type === "list" || s.type === "lines") { var cn = document.createElement("span"); cn.className = "cnt"; cn.textContent = "(" + (data || []).length + ")"; nm.appendChild(cn); }
+      sm.appendChild(nm); d.appendChild(sm);
+      var body = document.createElement("div"); body.className = "adm-sec-body"; d.appendChild(body);
+      if (s.note) { var n = document.createElement("p"); n.className = "adm-note"; n.textContent = s.note; body.appendChild(n); }
+      if (s.type === "object") {
+        s.fields.forEach(function (f) { var path = s.key ? s.key + "." + f.k : f.k; body.appendChild(fieldEl(f, path, getP(c, path))); });
+      } else if (s.type === "lines") {
+        body.appendChild(fieldEl({ l: s.l, t: "lines" }, s.key, data));
+      } else {
+        (data || []).forEach(function (item, i) {
+          var bx = document.createElement("div"); bx.className = "adm-box";
+          var h = document.createElement("div"); h.className = "adm-box-h"; var t1 = document.createElement("span"); t1.textContent = s.item + " " + (i + 1); h.appendChild(t1);
+          var bs = document.createElement("span"); bs.appendChild(btn("\u2191", "up", s.key, i)); bs.appendChild(btn("\u2193", "down", s.key, i)); bs.appendChild(btn("Remove", "del", s.key, i, "danger")); h.appendChild(bs);
+          bx.appendChild(h);
+          s.fields.forEach(function (f) { bx.appendChild(fieldEl(f, s.key + "." + i + "." + f.k, item[f.k])); });
+          body.appendChild(bx);
+        });
+        var add = btn("+ Add " + s.item.toLowerCase(), "add", s.key); add.style.cssText = "justify-self:start;padding:7px 12px;font-size:12px;margin:0"; body.appendChild(add);
+      }
+      box.appendChild(d);
+    });
+  }
+  function newItem(s, n) {
+    var o = {}; s.fields.forEach(function (f) { o[f.k] = f.t === "select" ? f.opts[0][0] : ""; });
+    if (s.key === "gallery") { var d = PHS[n % PHS.length]; o.a = d[0]; o.b = d[1]; }
+    return o;
+  }
+  var cf = $("#caseForm");
+  cf.addEventListener("toggle", function (e) { if (e.target.dataset && e.target.dataset.key !== undefined) openSecs[e.target.dataset.key] = e.target.open; }, true);
+  cf.addEventListener("input", function (e) {
+    var t = e.target, path = t.dataset.path; if (!path) return;
+    var v = t.dataset.lines ? t.value.split("\n").map(function (x) { return x.trim(); }).filter(Boolean) : t.value;
+    setP(projects[sel].case, path, v); persist();
+  });
+  cf.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-act]"); if (!b) return;
+    var c = projects[sel].case, key = b.dataset.key, i = +b.dataset.i, a = getP(c, key) || [], s = SCHEMA.filter(function (x) { return x.key === key; })[0];
+    if (b.dataset.act === "add") a.push(newItem(s, a.length));
+    else if (b.dataset.act === "del") a.splice(i, 1);
+    else if (b.dataset.act === "up" && i > 0) { var t = a[i]; a[i] = a[i - 1]; a[i - 1] = t; }
+    else if (b.dataset.act === "down" && i < a.length - 1) { var u = a[i]; a[i] = a[i + 1]; a[i + 1] = u; }
+    setP(c, key, a); renderCaseForm(); persist();
+  });
+  cf.addEventListener("change", async function (e) {
+    var t = e.target; if (!t.dataset.upload) return;
+    var url = await uploadImage(t.files[0]);
+    if (url) { setP(projects[sel].case, t.dataset.upload, url); persist(); renderCaseForm(); }
+    t.value = "";
+  });
+  $("#caseOn").addEventListener("change", function () { projects[sel].case.enabled = this.checked; renderPreview(); persist(); });
+  $$(".adm-tabs [data-tab]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var which = b.dataset.tab;
+      $$(".adm-tabs [data-tab]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      $("#editor").hidden = which !== "card"; $("#caseEditor").hidden = which !== "case";
+    });
+  });
+  $("#btnPreviewCase").addEventListener("click", function () {
+    finalize();
+    try { localStorage.setItem(LS, JSON.stringify({ cats: cats, projects: projects })); hasDraft = true; status(); } catch (e) {}
+    window.open("case-study.html?p=" + encodeURIComponent(projects[sel].id) + "&preview=1", "_blank");
+    say("Opened the preview in a new tab. It shows your unpublished draft.", "ok");
+  });
+
+  load(); loadGh(); status(); renderAll();
+})();
 </script>
 </body>
 </html>

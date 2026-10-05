@@ -1322,16 +1322,28 @@ window.PORTFOLIO_PROJECTS = [
     watch.forEach(function (el) { el.classList.add("in"); });
   } else {
     $$("[data-count]").forEach(function (el) { el.textContent = "0" + (el.getAttribute("data-suffix") || ""); });
+    var revealTargets = new WeakMap();
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
-        var el = en.target;
-        el.classList.add("in");
-        if (el.hasAttribute("data-count")) countUp(el);
-        io.unobserve(el);
+        var els = revealTargets.get(en.target) || [en.target];
+        els.forEach(function (el) {
+          el.classList.add("in");
+          if (el.hasAttribute("data-count")) countUp(el);
+        });
+        io.unobserve(en.target);
       });
     }, { threshold: 0.18, rootMargin: "0px 0px -6% 0px" });
-    watch.forEach(function (el) { io.observe(el); });
+    watch.forEach(function (el) {
+      var target = el.classList.contains("cover") ? el.parentElement : el;
+      var els = revealTargets.get(target);
+      if (!els) {
+        els = [];
+        revealTargets.set(target, els);
+        io.observe(target);
+      }
+      els.push(el);
+    });
   }
 
   /* ---------- Nav: sliding indicator + scroll spy ---------- */

@@ -109,5 +109,80 @@ window.PORTFOLIO_PROJECTS = [
         "ctaUrl": ""
       }
     }
+  },
+  {
+    "id": "test",
+    "client": "test",
+    "title": "New project",
+    "industry": "tech",
+    "year": "2026",
+    "metricBold": "",
+    "metricText": "",
+    "summary": "",
+    "tags": [],
+    "cats": [
+      "brand",
+      "web",
+      "campaign"
+    ],
+    "colors": {
+      "a": "#E9C46A",
+      "b": "#8A4B25",
+      "base": "#1E1A14"
+    },
+    "image": "images/test-background.png",
+    "url": "",
+    "featured": true,
+    "case": {
+      "enabled": false,
+      "role": "",
+      "sub": "",
+      "badge": "",
+      "liveLabel": "",
+      "liveUrl": "",
+      "quote": {
+        "text": "",
+        "by": ""
+      },
+      "gallery": [],
+      "brief": {
+        "lead": "",
+        "text": ""
+      },
+      "process": {
+        "intro": "",
+        "phases": [],
+        "caption": ""
+      },
+      "challenge": {
+        "text": "",
+        "image": "",
+        "caption": ""
+      },
+      "stats": [],
+      "questions": [],
+      "insights": [],
+      "identity": {
+        "text": "",
+        "image": "",
+        "caption": ""
+      },
+      "identityExtras": [],
+      "website": {
+        "intro": ""
+      },
+      "slides": [],
+      "campaign": {
+        "intro": "",
+        "caption": ""
+      },
+      "posts": [],
+      "outcomes": [],
+      "closing": {
+        "text": "",
+        "ctaLabel": "",
+        "ctaUrl": ""
+      }
+    }
   }
 ];

@@ -36,11 +36,11 @@ window.PORTFOLIO_PROJECTS = [
       "campaign"
     ],
     "colors": {
-      "a": "#E9C46A",
+      "a": "#ff0000",
       "b": "#8A4B25",
       "base": "#1E1A14"
     },
-    "image": "images/group-12-2.png",
+    "image": "images/test-background.png",
     "url": "",
     "featured": true,
     "case": {

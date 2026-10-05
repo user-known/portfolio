@@ -1,6 +1,6 @@
 /* Portfolio data. Edit with admin.html, or by hand.
    Keep the two assignments below; the site reads them on every page.
-   Generated 2026-10-04. */
+   Generated 2026-10-05. */
 window.PORTFOLIO_CATEGORIES = [
   {
     "id": "brand",
@@ -40,7 +40,7 @@ window.PORTFOLIO_PROJECTS = [
       "b": "#8A4B25",
       "base": "#1E1A14"
     },
-    "image": "",
+    "image": "images/group-12-2.png",
     "url": "",
     "featured": true,
     "case": {

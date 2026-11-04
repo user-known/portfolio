@@ -79,35 +79,86 @@ window.PORTFOLIO_PROJECTS = [
       },
       "stats": [],
       "questions": [
-        "Who is the brand speaking to, and what do they expect from an interiors studio?",
-        "Where does the current identity break down across web, print and social?",
-        "What should stay, and what should change?"
+        "Brand perception: Communicating ACME's expertise in corporate interior design more clearly.",
+        "Content hierarchy: Organising information to make the company's services and capabilities easier to understand.",
+        "Project presentation: Improving how completed projects communicated the company's experience and expertise."
       ],
-      "insights": [],
+      "insights": [
+        {
+          "title": "40",
+          "quote": "Logo Concepts"
+        },
+        {
+          "title": "4",
+          "quote": "short listed"
+        },
+        {
+          "title": "1",
+          "quote": "finalised"
+        }
+      ],
       "identity": {
-        "text": "",
-        "image": "",
+        "text": "primary image",
+        "image": "images/fb0a079c-d7d8-4c26-bcea-6f5aa5deaa4e.png",
         "caption": ""
       },
-      "identityExtras": [],
+      "identityExtras": [
+        {
+          "image": "images/l1-l2-oct.png",
+          "caption": ""
+        },
+        {
+          "image": "images/long-weekend-2.png",
+          "caption": ""
+        },
+        {
+          "image": "images/long-weekend.png",
+          "caption": ""
+        }
+      ],
       "website": {
         "intro": ""
       },
       "slides": [],
       "campaign": {
-        "intro": "",
+        "intro": "Social media creatives",
         "caption": ""
       },
-      "posts": [],
+      "posts": [
+        {
+          "image": "images/gritty-buckets-basketball-challenge.png"
+        },
+        {
+          "image": "images/gritty-buckets-basketball-challenge.png"
+        },
+        {
+          "image": "images/gritty-buckets-basketball-challenge.png"
+        }
+      ],
       "outcomes": [
         {
           "icon": "check",
           "title": "Delivered end to end",
           "text": "I owned the rebrand from logo and identity to website visuals and campaign creatives."
+        },
+        {
+          "icon": "check",
+          "title": "no.2",
+          "text": "description"
+        },
+        {
+          "icon": "check",
+          "title": "no.3",
+          "text": "description"
+        },
+        {
+          "icon": "check",
+          "title": "no.4",
+          "text": "description"
         }
       ],
       "closing": {
-        "text": "",
+        "text": "This project strengthened my ability to balance client expectations with design rationale, communicate decisions effectively, and manage an end-to-end design project independently.\n\nIt also reinforced the importance of thinking beyond individual design elements and creating a consistent experience across every brand touchpoint.",
         "ctaLabel": "",
         "ctaUrl": ""
       }

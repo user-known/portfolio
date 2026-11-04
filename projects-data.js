@@ -13,18 +13,22 @@ window.PORTFOLIO_CATEGORIES = [
   {
     "id": "campaign",
     "label": "Campaign"
+  },
+  {
+    "id": "logo-design",
+    "label": "Logo design"
   }
 ];
 window.PORTFOLIO_PROJECTS = [
   {
     "id": "acme-interiors",
     "client": "Acme Interiors",
-    "title": "Rebranding an interiors studio from logo to launch",
+    "title": "Building a New Brand Identity",
     "industry": "Interiors",
     "year": "2026",
-    "metricBold": "Full identity system",
-    "metricText": "logo, website visuals and campaign creatives",
-    "summary": "Creative lead on the rebrand, from the first logo sketches to the website and social rollout.",
+    "metricBold": "",
+    "metricText": "",
+    "summary": "A complete rebranding project for a corporate interiors firm, focused on establishing a more premium, professional, and consistent brand presence. The project covered logo redesign, visual identity development, brand guidelines, and website redesign.",
     "tags": [
       "Brand identity",
       "Logo design",
@@ -32,8 +36,7 @@ window.PORTFOLIO_PROJECTS = [
     ],
     "cats": [
       "brand",
-      "web",
-      "campaign"
+      "logo-design"
     ],
     "colors": {
       "a": "#ff0000",

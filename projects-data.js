@@ -43,7 +43,7 @@ window.PORTFOLIO_PROJECTS = [
       "b": "#8A4B25",
       "base": "#1E1A14"
     },
-    "image": "images/test-background.png",
+    "image": "images/acme-preview-image.png",
     "url": "",
     "featured": true,
     "case": {

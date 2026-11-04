@@ -1146,7 +1146,7 @@ window.PORTFOLIO_PROJECTS = [
           var num = isNaN(n) ? "<b>" + esc(s.value) + esc(sf) + "</b>" : '<b data-count="' + n + '" data-suffix="' + esc(sf) + '">' + n + esc(sf) + "</b>";
           return '<div class="stat">' + num + "<p>" + esc(s.label || "") + "</p></div>";
         }).join("") + "</div>";
-        if (qs.length) rh += '<h3 data-reveal style="margin-top:36px">Questions we asked</h3><div class="card qs" data-reveal><ol data-stagger=".08">' + qs.map(function (x, i) { return "<li><em>" + (i + 1) + "</em>" + esc(x) + "</li>"; }).join("") + "</ol></div>";
+        if (qs.length) rh += '<h3 data-reveal style="margin-top:36px">Key areas that needed attention</h3><div class="card qs" data-reveal><ol data-stagger=".08">' + qs.map(function (x, i) { return "<li><em>" + (i + 1) + "</em>" + esc(x) + "</li>"; }).join("") + "</ol></div>";
         secs.push({ id: "research", label: "Research", cls: "sec", html: rh });
       }
       var ins = arr(c.insights).filter(function (x) { return x && (txt(x.title) || txt(x.quote)); });

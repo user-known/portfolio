@@ -98,7 +98,7 @@ window.PORTFOLIO_PROJECTS = [
         }
       ],
       "identity": {
-        "text": "primary image",
+        "text": "hero image",
         "image": "images/fb0a079c-d7d8-4c26-bcea-6f5aa5deaa4e.png",
         "caption": ""
       },

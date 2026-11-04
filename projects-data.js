@@ -150,24 +150,29 @@ window.PORTFOLIO_PROJECTS = [
       ],
       "outcomes": [
         {
-          "icon": "check",
-          "title": "Delivered end to end",
-          "text": "I owned the rebrand from logo and identity to website visuals and campaign creatives."
+          "icon": "star",
+          "title": "Brand Identity",
+          "text": "Redesigned logo, logo variations, and a refreshed visual identity."
         },
         {
-          "icon": "check",
-          "title": "no.2",
-          "text": "description"
+          "icon": "spark",
+          "title": "Visual System",
+          "text": "Defined colour palette, typography, and brand guidelines."
         },
         {
-          "icon": "check",
-          "title": "no.3",
-          "text": "description"
+          "icon": "spark",
+          "title": "Website Experience",
+          "text": "Redesigned website layouts, content structure, and responsive interfaces."
         },
         {
-          "icon": "check",
-          "title": "no.4",
-          "text": "description"
+          "icon": "star",
+          "title": "Design System",
+          "text": "Built reusable Figma components and consistent interface patterns."
+        },
+        {
+          "icon": "spark",
+          "title": "Brand Communication",
+          "text": "Created social media launch creatives and supporting digital communication assets."
         }
       ],
       "closing": {

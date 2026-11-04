@@ -117,12 +117,25 @@ window.PORTFOLIO_PROJECTS = [
         }
       ],
       "website": {
-        "intro": ""
+        "intro": "Website UI designs and responsive layouts"
       },
-      "slides": [],
+      "slides": [
+        {
+          "image": "images/chatgpt-image-jun-25-2026-10_32_13-am.png",
+          "caption": ""
+        },
+        {
+          "image": "images/chatgpt-image-jun-25-2026-10_34_14-am.png",
+          "caption": ""
+        },
+        {
+          "image": "images/idea-1.png",
+          "caption": ""
+        }
+      ],
       "campaign": {
         "intro": "Social media creatives",
-        "caption": ""
+        "caption": "Social media launch creatives"
       },
       "posts": [
         {

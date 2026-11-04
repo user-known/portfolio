@@ -64,7 +64,12 @@ window.PORTFOLIO_PROJECTS = [
       },
       "process": {
         "intro": "01. Establishing a new identity\n\nI started by exploring different logo directions while considering the client's requirements and the existing brand's visual recognition.\n\nRather than completely abandoning the original geometric foundation, I retained elements of its underlying structure while introducing a new visual concept.\n\nI explored approximately 40 logo variations before arriving at the final direction.\n\n02. Developing the visual language\n\nThe identity needed to communicate creativity while maintaining the credibility expected of a corporate interiors firm.\n\nI developed a visual system using:\n- Pumpkin Orange #FE7F2D to communicate creativity, energy, and transformation.\n- Charcoal #233D4D to establish professionalism, trust, and stability.\n- Mangelic serif typography to introduce a premium and established character.\nI also established visual guidelines to maintain consistency across digital platforms and brand communication.\n\n03. Redesigning the website experience\n\nWith the new identity established, I moved towards redesigning ACME's website.\n\nI retained the existing sitemap but reworked the layouts and content structure to improve how the company communicated its services and capabilities.\n\nMy approach was to shift the narrative from \"We did this\" to \"We can do this.\"\n\nThe focus was on presenting ACME as a capable corporate interior design partner rather than simply showcasing completed construction projects.\n\n04. Building a consistent design system\n\nI created reusable components and established a consistent interface system to support the website's design.\n\nI also developed dedicated mobile layouts, adjusting typography, spacing, and content hierarchy to improve the experience on smaller screens.\n\n05. Preparing for launch\n\nAlongside the identity and website design, I created supporting social media creatives and brand communication assets to extend the new visual language across digital touchpoints.",
-        "phases": [],
+        "phases": [
+          "Establishing",
+          "Redesigning",
+          "Developing",
+          "Building"
+        ],
         "caption": ""
       },
       "challenge": {

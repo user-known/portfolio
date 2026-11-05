@@ -21,9 +21,9 @@ Your edits are saved as a draft in your browser until you publish or discard the
 ## Case study pages
 There is one template, `case-study.html`. It builds each project's page from `projects-data.js`, so you never copy it.
 - In the admin, open a project, switch to the **Case study page** tab and tick "Show a case study page".
-- Fill in only the sections you need (header, overview quote and image tabs, brief, process diagram, challenge, research numbers and questions, insights, identity, website slides, campaign images, outcomes). A section with nothing in it is left out of the page and the side menu.
+- Fill in only the sections you need (header, overview quote and image tabs, brief, process sections, challenge, research numbers and questions, insights, identity, website slides, campaign images, outcomes). Add or remove process sections as needed; each section can have an H3 heading and text. A section with nothing in it is left out of the page and the side menu.
 - The project's card then links to `case-study.html?p=<page name>` automatically. Use **Preview page** to see your unpublished draft in a new tab.
-- A project with no case study page shows a card with no link. The "Custom link" field on the Project card tab overrides the built-in page (for example to point at an external site).
+- A project with no case study page shows a card with no link. Projects with case study pages link to their built-in page.
 
 ## Images
 Put images in an `images/` folder and enter the path (for example `images/acme.jpg`) as the cover image, or use **Upload image** in the admin with GitHub connected. Without an image the card uses its gradient cover.

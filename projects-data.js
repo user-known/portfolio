@@ -26,8 +26,6 @@ window.PORTFOLIO_PROJECTS = [
     "title": "Building a New Brand Identity",
     "industry": "Interiors",
     "year": "2026",
-    "metricBold": "",
-    "metricText": "",
     "summary": "A complete rebranding project for a corporate interiors firm, focused on establishing a more premium, professional, and consistent brand presence. The project covered logo redesign, visual identity development, brand guidelines, and website redesign.",
     "tags": [
       "Brand identity",
@@ -44,7 +42,6 @@ window.PORTFOLIO_PROJECTS = [
       "base": "#1E1A14"
     },
     "image": "images/acme-preview-image.png",
-    "url": "",
     "featured": true,
     "case": {
       "enabled": true,
@@ -150,27 +147,22 @@ window.PORTFOLIO_PROJECTS = [
       ],
       "outcomes": [
         {
-          "icon": "star",
           "title": "Brand Identity",
           "text": "Redesigned logo, logo variations, and a refreshed visual identity."
         },
         {
-          "icon": "spark",
           "title": "Visual System",
           "text": "Defined colour palette, typography, and brand guidelines."
         },
         {
-          "icon": "spark",
           "title": "Website Experience",
           "text": "Redesigned website layouts, content structure, and responsive interfaces."
         },
         {
-          "icon": "star",
           "title": "Design System",
           "text": "Built reusable Figma components and consistent interface patterns."
         },
         {
-          "icon": "spark",
           "title": "Brand Communication",
           "text": "Created social media launch creatives and supporting digital communication assets."
         }

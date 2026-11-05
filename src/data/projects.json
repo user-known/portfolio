@@ -20,8 +20,6 @@
       "title": "Rebranding an interiors studio from logo to launch",
       "industry": "Interiors",
       "year": "2026",
-      "metricBold": "Full identity system",
-      "metricText": "logo, website visuals and campaign creatives",
       "summary": "Creative lead on the rebrand, from the first logo sketches to the website and social rollout.",
       "tags": [
         "Brand identity",
@@ -39,7 +37,6 @@
         "base": "#1E1A14"
       },
       "image": "",
-      "url": "",
       "featured": true,
       "case": {
         "enabled": true,
@@ -96,7 +93,6 @@
         "posts": [],
         "outcomes": [
           {
-            "icon": "check",
             "title": "Delivered end to end",
             "text": "I owned the rebrand from logo and identity to website visuals and campaign creatives."
           }

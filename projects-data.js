@@ -183,8 +183,8 @@ window.PORTFOLIO_PROJECTS = [
       ],
       "closing": {
         "text": "This project strengthened my ability to balance client expectations with design rationale, communicate decisions effectively, and manage an end-to-end design project independently.\n\nIt also reinforced the importance of thinking beyond individual design elements and creating a consistent experience across every brand touchpoint.",
-        "ctaLabel": "Visit the Site",
-        "ctaUrl": "https://user-known.github.io/acme-interiors-site/index.html"
+        "ctaLabel": "",
+        "ctaUrl": ""
       }
     }
   },

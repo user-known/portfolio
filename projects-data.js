@@ -132,15 +132,43 @@ window.PORTFOLIO_PROJECTS = [
       },
       "slides": [
         {
-          "image": "images/chatgpt-image-jun-25-2026-10_32_13-am.png",
+          "image": "images/cover---12.png",
           "caption": ""
         },
         {
-          "image": "images/chatgpt-image-jun-25-2026-10_34_14-am.png",
+          "image": "images/logo-design---4.png",
           "caption": ""
         },
         {
-          "image": "images/idea-1.png",
+          "image": "images/mark-construction---4.png",
+          "caption": ""
+        },
+        {
+          "image": "images/logo-grid---3.png",
+          "caption": ""
+        },
+        {
+          "image": "images/logo-usage---3.png",
+          "caption": ""
+        },
+        {
+          "image": "images/color-palette---6.png",
+          "caption": ""
+        },
+        {
+          "image": "images/color-logo---4.png",
+          "caption": ""
+        },
+        {
+          "image": "images/typography---6.png",
+          "caption": ""
+        },
+        {
+          "image": "images/logo-misuse---2.png",
+          "caption": ""
+        },
+        {
+          "image": "images/business-cards---2.png",
           "caption": ""
         }
       ],
@@ -150,13 +178,13 @@ window.PORTFOLIO_PROJECTS = [
       },
       "posts": [
         {
-          "image": "images/gritty-buckets-basketball-challenge.png"
+          "image": "images/acme-creative-1.jpeg"
         },
         {
-          "image": "images/gritty-buckets-basketball-challenge.png"
+          "image": "images/acme-creative-2.jpeg"
         },
         {
-          "image": "images/gritty-buckets-basketball-challenge.png"
+          "image": "images/acme-creative-3.jpeg"
         }
       ],
       "outcomes": [

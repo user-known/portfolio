@@ -1141,6 +1141,7 @@ window.PORTFOLIO_PROJECTS = [
         .map(function (f) { return "<div><dt>" + f[0] + "</dt><dd>" + esc(f[1]) + "</dd></div>"; });
       var live = safeUrl(c.liveUrl);
       if (live) facts.push('<div><dt>Live site</dt><dd><a href="' + esc(live) + '" target="_blank" rel="noopener">' + esc(txt(c.liveLabel) || "Visit site") + " " + svgi("i-ext") + "</a></dd></div>");
+      var cl = c.closing || {}, cta = safeUrl(cl.ctaUrl);
 
       var secs = [];
       var q = c.quote || {}, gal = arr(c.gallery).filter(function (g) { return g && (txt(g.image) || txt(g.label)); });
@@ -1208,7 +1209,7 @@ window.PORTFOLIO_PROJECTS = [
       if (txt(cp.intro) || po.length) secs.push({ id: "campaign", label: "Campaign", cls: "sec prose", html: "<h2 data-reveal>Social and campaign creatives</h2>" + paras(cp.intro) +
         (po.length ? '<div class="grid3" data-stagger=".1">' + po.map(function (x) { return '<figure><div class="card">' + framed(x.image, "", "", "4/5", "") + "</div></figure>"; }).join("") + "</div>" : "") +
         (txt(cp.caption) ? '<p class="cap" data-reveal>' + esc(cp.caption) + "</p>" : "") });
-      var oc = arr(c.outcomes).filter(function (x) { return x && (txt(x.title) || txt(x.text)); }), cl = c.closing || {}, cta = safeUrl(cl.ctaUrl);
+      var oc = arr(c.outcomes).filter(function (x) { return x && (txt(x.title) || txt(x.text)); });
       if (oc.length || txt(cl.text) || cta) secs.push({ id: "outcomes", label: "Outcomes", cls: "sec prose", html: "<h2 data-reveal>Outcomes &amp; takeaways</h2>" +
         (oc.length ? '<div class="outcomes" data-stagger=".09">' + oc.map(function (x) { return '<div class="card outcome"><span class="ico">' + svgi("i-spark") + "</span><h4>" + esc(x.title || "") + "</h4><p>" + esc(x.text || "") + "</p></div>"; }).join("") + "</div>" : "") +
         paras(cl.text) + (cta ? '<p data-reveal><a class="btn-dark" href="' + esc(cta) + '" target="_blank" rel="noopener">' + esc(txt(cl.ctaLabel) || "Visit the live site") + " " + svgi("i-ext") + "</a></p>" : "") });
@@ -1222,6 +1223,7 @@ window.PORTFOLIO_PROJECTS = [
         '<h1><span class="ln"><span style="--d:.12s">' + esc(title) + "</span></span></h1>" +
         (txt(c.sub) || txt(p.summary) ? '<p class="sub hero-in" style="animation-delay:.45s">' + esc(txt(c.sub) || p.summary) + "</p>" : "") +
         (txt(c.badge) ? '<span class="badge hero-in" style="animation-delay:.55s">' + svgi("i-shield") + esc(c.badge) + "</span>" : "") +
+        (cta ? '<p class="hero-in" style="margin:18px 0 0;animation-delay:.6s"><a class="btn-dark" href="' + esc(cta) + '" target="_blank" rel="noopener">' + esc(txt(cl.ctaLabel) || "View site") + " " + svgi("i-ext") + "</a></p>" : "") +
         (facts.length ? '<dl class="facts-bar" data-reveal style="--d:.2s">' + facts.join("") + "</dl>" : "") +
         '<div id="heroCoverSlot"></div></div></header><main>' +
         (secs.length ? '<div class="wrap doc"><aside class="rail" aria-label="On this page"><ul>' + secs.map(function (s, i) { return '<li><a href="#' + s.id + '"' + (i === 0 ? ' class="on"' : "") + "><i></i><span>" + s.label + "</span></a></li>"; }).join("") + '</ul></aside><article class="content">' +

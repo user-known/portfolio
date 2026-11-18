@@ -109,26 +109,22 @@ window.PORTFOLIO_PROJECTS = [
         }
       ],
       "identity": {
-        "text": "hero image",
-        "image": "images/fb0a079c-d7d8-4c26-bcea-6f5aa5deaa4e.png",
+        "text": "",
+        "image": "images/acme-website-hero-section.png",
         "caption": ""
       },
       "identityExtras": [
         {
-          "image": "images/l1-l2-oct.png",
+          "image": "images/acme-website-2.png",
           "caption": ""
         },
         {
-          "image": "images/long-weekend-2.png",
-          "caption": ""
-        },
-        {
-          "image": "images/long-weekend.png",
+          "image": "images/acme-website-contact.png",
           "caption": ""
         }
       ],
       "website": {
-        "intro": "Website UI designs and responsive layouts"
+        "intro": "Brand Guide"
       },
       "slides": [
         {

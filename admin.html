@@ -1374,7 +1374,7 @@ window.PORTFOLIO_PROJECTS = [
         (ex.length ? '<div class="grid2" data-stagger=".1">' + ex.map(function (x) { return shot(x.image, x.caption); }).join("") + "</div>" : "") });
       var wb = c.website || {}, sl = arr(c.slides).filter(function (x) { return x && txt(x.image); });
       if (txt(wb.intro) || sl.length) {
-        var wh = "<h2 data-reveal>Website visuals</h2>" + paras(wb.intro);
+        var wh = "<h2 data-reveal>Identity</h2>" + paras(wb.intro);
         if (sl.length === 1) wh += shot(sl[0].image, sl[0].caption);
         else if (sl.length > 1) wh += '<div class="slider" id="slider" data-reveal><div class="slider-view" tabindex="0" aria-label="Website visuals"><div class="slider-track">' +
           sl.map(function (x) { return '<figure class="slide"><div class="card">' + framed(x.image, "", "", "", x.caption) + "</div>" + (txt(x.caption) ? "<figcaption>" + esc(x.caption) + "</figcaption>" : "") + "</figure>"; }).join("") +

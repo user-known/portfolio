@@ -307,10 +307,19 @@ window.PORTFOLIO_PROJECTS = [
       ],
       "identity": {
         "text": "",
-        "image": "",
+        "image": "images/ottam-hero-sectio.png",
         "caption": ""
       },
-      "identityExtras": [],
+      "identityExtras": [
+        {
+          "image": "images/ottam-sessions.png",
+          "caption": ""
+        },
+        {
+          "image": "images/ottam-contact.png",
+          "caption": ""
+        }
+      ],
       "website": {
         "intro": "Brand guide"
       },

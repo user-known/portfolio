@@ -170,7 +170,7 @@ window.PORTFOLIO_PROJECTS = [
       ],
       "campaign": {
         "intro": "Social media creatives",
-        "caption": "Social media launch creatives"
+        "caption": ""
       },
       "posts": [
         {

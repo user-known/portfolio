@@ -1223,7 +1223,6 @@ window.PORTFOLIO_PROJECTS = [
         '<h1><span class="ln"><span style="--d:.12s">' + esc(title) + "</span></span></h1>" +
         (txt(c.sub) || txt(p.summary) ? '<p class="sub hero-in" style="animation-delay:.45s">' + esc(txt(c.sub) || p.summary) + "</p>" : "") +
         (txt(c.badge) ? '<span class="badge hero-in" style="animation-delay:.55s">' + svgi("i-shield") + esc(c.badge) + "</span>" : "") +
-        (cta ? '<p class="hero-in" style="margin:18px 0 0;animation-delay:.6s"><a class="btn-dark" href="' + esc(cta) + '" target="_blank" rel="noopener">' + esc(txt(cl.ctaLabel) || "View site") + " " + svgi("i-ext") + "</a></p>" : "") +
         (facts.length ? '<dl class="facts-bar" data-reveal style="--d:.2s">' + facts.join("") + "</dl>" : "") +
         '<div id="heroCoverSlot"></div></div></header><main>' +
         (secs.length ? '<div class="wrap doc"><aside class="rail" aria-label="On this page"><ul>' + secs.map(function (s, i) { return '<li><a href="#' + s.id + '"' + (i === 0 ? ' class="on"' : "") + "><i></i><span>" + s.label + "</span></a></li>"; }).join("") + '</ul></aside><article class="content">' +

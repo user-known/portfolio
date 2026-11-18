@@ -96,7 +96,7 @@ window.PORTFOLIO_PROJECTS = [
       ],
       "insights": [
         {
-          "title": "40",
+          "title": "40+",
           "quote": "Logo Concepts"
         },
         {
@@ -265,19 +265,19 @@ window.PORTFOLIO_PROJECTS = [
       ],
       "insights": [
         {
-          "title": "03 Weeks",
+          "title": "03",
           "quote": "The complete project, from identity exploration to website launch, was handled within three weeks."
         },
         {
-          "title": "01 Designer",
+          "title": "01",
           "quote": "The project was independently managed, covering brand identity, UX/UI, responsive design, prototyping, and implementation coordination."
         },
         {
-          "title": "06 Sections",
+          "title": "06",
           "quote": "The website's information architecture was organised into Home, About, Training Programmes, Training Schedules, Athlete Development, and Contact."
         },
         {
-          "title": "End-to-end Ownership",
+          "title": "A to Z",
           "quote": "The work extended beyond Figma, with direct involvement in development reviews, design validation, and the final website launch."
         }
       ],

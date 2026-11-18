@@ -183,18 +183,18 @@ window.PORTFOLIO_PROJECTS = [
       ],
       "closing": {
         "text": "This project strengthened my ability to balance client expectations with design rationale, communicate decisions effectively, and manage an end-to-end design project independently.\n\nIt also reinforced the importance of thinking beyond individual design elements and creating a consistent experience across every brand touchpoint.",
-        "ctaLabel": "",
-        "ctaUrl": ""
+        "ctaLabel": "Visit the Site",
+        "ctaUrl": "https://user-known.github.io/acme-interiors-site/index.html"
       }
     }
   },
   {
     "id": "ottam",
     "client": "Ottam",
-    "title": "Ottam- Brand Identity & Website Design",
+    "title": "A running identity built around movement.",
     "industry": "Sports & Fitness",
     "year": "2026",
-    "summary": "Ottam is a running club built to support athletes at different stages of their running journey, from beginners taking their first steps to experienced runners pursuing competitive goals.",
+    "summary": "Creating a distinctive identity and a structured digital experience for a running club that brings athletes together through training, performance, and community.",
     "tags": [],
     "cats": [
       "brand",
@@ -212,29 +212,75 @@ window.PORTFOLIO_PROJECTS = [
       "enabled": true,
       "role": "Independent Designer",
       "sub": "Ottam is a running club built to support athletes at different stages of their running journey, from beginners taking their first steps to experienced runners pursuing competitive goals.",
-      "badge": "The project brought together identity design, information architecture, responsive UI design, and website implementation.",
+      "badge": "",
       "liveLabel": "",
       "liveUrl": "",
       "quote": {
-        "text": "",
+        "text": "The project brought together identity design, information architecture, responsive UI design, and website implementation.",
         "by": ""
       },
       "gallery": [],
       "brief": {
-        "lead": "",
-        "text": ""
+        "lead": "Ottam was a completely new running club looking to establish its identity and digital presence.",
+        "text": "The objective was to create a professional and recognisable brand while developing a website that could communicate its training ecosystem. The website needed to introduce the club, explain its training programmes, present training schedules, and communicate its approach to athlete development.\n\nThe experience also needed to appeal to runners with different levels of experience, making the club feel accessible to beginners while maintaining credibility among experienced athletes.\n\nThe core expectations were professionalism, athletic performance, community, and accessibility."
       },
       "process": {
-        "blocks": []
+        "blocks": [
+          {
+            "heading": "01. Understanding the brand",
+            "text": "I began by understanding Ottam's purpose, audience, and the qualities the club wanted to communicate.\n\nRather than approaching the identity as a conventional sports brand, I explored how the idea of movement could become the foundation of its visual language.\n\nThe exploration covered different logo styles, typography, colour combinations, and brand personalities before developing a direction for client approval."
+          },
+          {
+            "heading": "02. Developing the identity",
+            "text": "The name Ottam represents running, movement, and momentum. I explored how this meaning could be translated into the logo itself.\n\nThe letter 'a' became the central idea of the symbol. Its form suggests the legs of a person running, creating a connection between the typography and the club's core activity.\n\nI developed the identity into a complete system, including logo variations, a colour palette, typography, and brand guidelines.\n\nThe resulting visual language was designed to feel kinetic, welcoming, direct, and playful."
+          },
+          {
+            "heading": "03. Structuring the website",
+            "text": "With the identity established, I moved into planning the website experience.\n\nThe information architecture was organised around six main sections:\nHome, About, Training Programmes, Training Schedules, Athlete Development, Contact\n\nThe structure provided dedicated spaces for the club's introduction, training offerings, and athlete development information."
+          },
+          {
+            "heading": "04. Wireframing and interface design",
+            "text": "I developed low-fidelity wireframes to establish the page structures, content hierarchy, and layout direction before moving into high-fidelity UI design.\n\nThe interface was designed to carry the brand's energetic personality without making the information difficult to navigate or read.\n\nBright brand colours were used selectively for highlights and calls to action, helping important elements stand out while maintaining a clear interface.\n\nPhotography and brand graphics were combined to communicate the running experience and reinforce visual consistency."
+          },
+          {
+            "heading": "05. Responsive design and prototyping",
+            "text": "I established the primary website layouts through a desktop-first approach and adapted them for mobile screens.\n\nThe mobile layouts retained the original content structure while accommodating the smaller screen format.\n\nI also developed reusable Figma components and interactive prototypes to maintain consistency across pages and communicate the intended experience."
+          },
+          {
+            "heading": "06. Development and launch",
+            "text": "I coordinated the development with the design specifications, reviewed the implemented website against the Figma designs, identified interface inconsistencies, and made adjustments where technical limitations affected the design.\n\nI also reviewed the final implementation before launch to ensure the delivered website remained aligned with the approved designs."
+          }
+        ]
       },
       "challenge": {
-        "text": "",
+        "text": "One of the main challenges was translating Ottam's energetic brand personality into a website without compromising readability and usability.\n\nThe visual identity incorporated expressive typography, bold colours, and a sense of forward movement. However, the website also needed to communicate practical information about training programmes, schedules, and athlete development.\n\nAn overly expressive interface could make important information harder to scan, while an overly neutral design could dilute the personality of the brand.\n\nI approached this by treating the brand identity and interface functionality as complementary elements rather than competing priorities.\n\nBright colours were reserved primarily for highlights and calls to action, allowing the content to remain clear while preserving the energy of the identity.",
         "image": "",
         "caption": ""
       },
       "stats": [],
-      "questions": [],
-      "insights": [],
+      "questions": [
+        "Translating movement into a visual language",
+        "Building a clear information structure",
+        "Maintaining visual consistency"
+      ],
+      "insights": [
+        {
+          "title": "03 Weeks",
+          "quote": "The complete project, from identity exploration to website launch, was handled within three weeks."
+        },
+        {
+          "title": "01 Designer",
+          "quote": "The project was independently managed, covering brand identity, UX/UI, responsive design, prototyping, and implementation coordination."
+        },
+        {
+          "title": "06 Sections",
+          "quote": "The website's information architecture was organised into Home, About, Training Programmes, Training Schedules, Athlete Development, and Contact."
+        },
+        {
+          "title": "End-to-end Ownership",
+          "quote": "The work extended beyond Figma, with direct involvement in development reviews, design validation, and the final website launch."
+        }
+      ],
       "identity": {
         "text": "",
         "image": "",
@@ -242,15 +288,65 @@ window.PORTFOLIO_PROJECTS = [
       },
       "identityExtras": [],
       "website": {
-        "intro": ""
+        "intro": "Brand guide"
       },
-      "slides": [],
+      "slides": [
+        {
+          "image": "images/ottam-brand-guidelines-1.png",
+          "caption": ""
+        },
+        {
+          "image": "images/ottam-brand-guidelines-2.png",
+          "caption": ""
+        },
+        {
+          "image": "images/ottam-brand-guidelines-4.png",
+          "caption": ""
+        },
+        {
+          "image": "images/ottam-brand-guidelines-5.png",
+          "caption": ""
+        },
+        {
+          "image": "images/ottam-brand-guidelines-8.png",
+          "caption": ""
+        },
+        {
+          "image": "images/ottam-brand-guidelines-12.png",
+          "caption": ""
+        },
+        {
+          "image": "images/ottam-brand-guidelines-13.png",
+          "caption": ""
+        },
+        {
+          "image": "images/ottam-brand-guidelines-16.png",
+          "caption": ""
+        },
+        {
+          "image": "images/ottam-brand-guidelines-19.png",
+          "caption": ""
+        }
+      ],
       "campaign": {
         "intro": "",
         "caption": ""
       },
       "posts": [],
-      "outcomes": [],
+      "outcomes": [
+        {
+          "title": "A distinctive brand identity",
+          "text": "Developed a complete identity for Ottam, including the primary logo, logo variations, colour palette, typography system, and brand guidelines."
+        },
+        {
+          "title": "Structured website experience",
+          "text": "Designed a six-section website that organises the club's introduction, training programmes, schedules, and athlete development information into a clear content structure."
+        },
+        {
+          "title": "Design-to-development execution",
+          "text": "Worked directly with developers, reviewed implementation, addressed UI inconsistencies, and supported the website through its final launch."
+        }
+      ],
       "closing": {
         "text": "",
         "ctaLabel": "",

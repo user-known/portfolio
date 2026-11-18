@@ -48,8 +48,8 @@ window.PORTFOLIO_PROJECTS = [
       "role": "Lead Designer",
       "sub": "Transforming ACME Interiors into a more refined and recognisable brand through a cohesive identity system and a redesigned digital experience.",
       "badge": "",
-      "liveLabel": "",
-      "liveUrl": "",
+      "liveLabel": "acme interiors",
+      "liveUrl": "https://user-known.github.io/acme-interiors-site/",
       "quote": {
         "text": "The rebranding brought a fresh perspective to ACME Interiors. The attention to detail, thoughtful design decisions, and consistency across the brand identity and website helped us establish a more refined direction for the company. The entire process was handled with creativity, professionalism, and a clear understanding of our vision.",
         "by": "Komal, Marketing Lead"
@@ -109,7 +109,7 @@ window.PORTFOLIO_PROJECTS = [
         }
       ],
       "identity": {
-        "text": "Website UI designs and responsive layouts",
+        "text": "hero image",
         "image": "images/fb0a079c-d7d8-4c26-bcea-6f5aa5deaa4e.png",
         "caption": ""
       },
@@ -191,10 +191,10 @@ window.PORTFOLIO_PROJECTS = [
   {
     "id": "ottam",
     "client": "Ottam",
-    "title": "New project",
-    "industry": "",
+    "title": "Ottam- Brand Identity & Website Design",
+    "industry": "Sports & Fitness",
     "year": "2026",
-    "summary": "",
+    "summary": "Ottam is a running club built to support athletes at different stages of their running journey, from beginners taking their first steps to experienced runners pursuing competitive goals.",
     "tags": [],
     "cats": [
       "brand",
@@ -207,12 +207,12 @@ window.PORTFOLIO_PROJECTS = [
       "base": "#1E1A14"
     },
     "image": "images/ottam-preview-image.png",
-    "featured": false,
+    "featured": true,
     "case": {
-      "enabled": false,
-      "role": "",
-      "sub": "",
-      "badge": "",
+      "enabled": true,
+      "role": "Independent Designer",
+      "sub": "Ottam is a running club built to support athletes at different stages of their running journey, from beginners taking their first steps to experienced runners pursuing competitive goals.",
+      "badge": "The project brought together identity design, information architecture, responsive UI design, and website implementation.",
       "liveLabel": "",
       "liveUrl": "",
       "quote": {

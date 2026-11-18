@@ -121,6 +121,14 @@ window.PORTFOLIO_PROJECTS = [
         {
           "image": "images/acme-website-contact.png",
           "caption": ""
+        },
+        {
+          "image": "images/acme-admin-panel.png",
+          "caption": ""
+        },
+        {
+          "image": "images/acme-careers-admin-panel.png",
+          "caption": ""
         }
       ],
       "website": {

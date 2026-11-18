@@ -1211,7 +1211,7 @@ window.PORTFOLIO_PROJECTS = [
       var oc = arr(c.outcomes).filter(function (x) { return x && (txt(x.title) || txt(x.text)); }), cl = c.closing || {}, cta = safeUrl(cl.ctaUrl);
       if (oc.length || txt(cl.text) || cta) secs.push({ id: "outcomes", label: "Outcomes", cls: "sec prose", html: "<h2 data-reveal>Outcomes &amp; takeaways</h2>" +
         (oc.length ? '<div class="outcomes" data-stagger=".09">' + oc.map(function (x) { return '<div class="card outcome"><span class="ico">' + svgi("i-spark") + "</span><h4>" + esc(x.title || "") + "</h4><p>" + esc(x.text || "") + "</p></div>"; }).join("") + "</div>" : "") +
-        paras(cl.text) + (cta ? '<p data-reveal><a class="btn-dark" href="' + esc(cta) + '">' + esc(txt(cl.ctaLabel) || "Visit the live site") + " " + svgi("i-ext") + "</a></p>" : "") });
+        paras(cl.text) + (cta ? '<p data-reveal><a class="btn-dark" href="' + esc(cta) + '" target="_blank" rel="noopener">' + esc(txt(cl.ctaLabel) || "Visit the live site") + " " + svgi("i-ext") + "</a></p>" : "") });
 
       var nx = null;
       for (var k = 1; k < list.length; k++) { var o = list[(at + k) % list.length]; if (caseHref(o) && o !== p) { nx = o; break; } }

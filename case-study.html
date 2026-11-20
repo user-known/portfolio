@@ -271,6 +271,11 @@ figcaption, .cap { margin-top: 10px; font-size: 12px; color: var(--faint); }
 .ph { position: relative; display: grid; place-items: center; width: 100%; aspect-ratio: var(--ar,16/9.5); border-radius: 12px; background: linear-gradient(135deg, var(--a,#E8EBF4), var(--b,#D3DBEE)); color: rgba(20,20,40,.45); font-size: 13px; font-weight: 500; overflow: hidden; }
 :root[data-theme="dark"] .ph { color: rgba(255,255,255,.5); filter: brightness(.75); }
 .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ph video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ph-video-mute { position: absolute; z-index: 1; right: 12px; bottom: 12px; display: grid; place-items: center; width: 38px; height: 38px; padding: 0; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; background: rgba(0,0,0,.62); color: #fff; cursor: pointer; backdrop-filter: blur(8px); }
+.ph-video-mute:hover { background: rgba(0,0,0,.82); }
+.ph-video-mute:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.ph-video-mute svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .ph > .image-open, .cover > .image-open { position: absolute; inset: 0; }
 .image-open img { cursor: zoom-in; }
 .shot-open { display: block; cursor: zoom-in; }
@@ -1113,6 +1118,12 @@ window.PORTFOLIO_PROJECTS = [
       var u = safeUrl(src), st = "--a:" + col(a, "#E8EBF4") + ";--b:" + col(b, "#D3DBEE") + (ar ? ";--ar:" + ar : "");
       return '<div class="ph" style="' + st + '">' + (u ? '<a class="image-open" href="' + esc(u) + '" aria-label="View image: ' + esc(label || "Case study image") + '"><img src="' + esc(u) + '" alt="' + esc(label || "") + '" loading="lazy"></a>' : esc(label || "")) + "</div>";
     };
+    var galleryMedia = function (src, a, b, label) {
+      var u = safeUrl(src);
+      if (!u || !/\.(mp4|webm)(?:[?#].*)?$/i.test(u)) return framed(src, a, b, "", label);
+      var st = "--a:" + col(a, "#E8EBF4") + ";--b:" + col(b, "#D3DBEE");
+      return '<div class="ph" style="' + st + '"><video src="' + esc(u) + '" aria-label="' + esc(label || "Case study video") + '" autoplay muted loop playsinline preload="metadata"></video><button class="ph-video-mute" type="button" aria-label="Unmute video" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Zm5 4 5 6m0-6-5 6"/></svg></button></div>';
+    };
 
     var params = new URLSearchParams(location.search), wantId = params.get("p"), preview = params.get("preview") === "1";
     var list = DATA, banner = "";
@@ -1149,12 +1160,12 @@ window.PORTFOLIO_PROJECTS = [
         var h = '<h2 data-reveal>Overview</h2>';
         if (txt(q.text)) h += '<div class="card quote-card" data-reveal><span class="q">\u201C</span><p>' + esc(q.text) + (txt(q.by) ? "<small>" + esc(q.by) + "</small>" : "") + "</p></div>";
         if (gal.length === 1) {
-          h += '<figure data-reveal style="margin-top:16px"><div class="card">' + framed(gal[0].image, gal[0].a, gal[0].b, "", gal[0].label) + "</div>" + (txt(gal[0].caption) ? "<figcaption>" + esc(gal[0].caption) + "</figcaption>" : "") + "</figure>";
+          h += '<figure data-reveal style="margin-top:16px"><div class="card">' + galleryMedia(gal[0].image, gal[0].a, gal[0].b, gal[0].label) + "</div>" + (txt(gal[0].caption) ? "<figcaption>" + esc(gal[0].caption) + "</figcaption>" : "") + "</figure>";
         } else if (gal.length > 1) {
           h += '<div class="viewer" id="viewer" data-reveal style="margin-top:16px"><div class="card"><div class="viewer-stage"><div class="ph sizer"></div>' +
-            gal.map(function (g, i) { var d = PHS[i % PHS.length]; return '<div class="panel">' + framed(g.image, g.a || d[0], g.b || d[1], "", g.label) + "</div>"; }).join("") +
+            gal.map(function (g, i) { var d = PHS[i % PHS.length]; return '<div class="panel">' + galleryMedia(g.image, g.a || d[0], g.b || d[1], g.label) + "</div>"; }).join("") +
             '</div></div><div class="viewer-bar"><button class="pause" type="button" aria-label="Pause slideshow">' + svgi("i-pause") + '</button><div role="tablist" style="display:flex;gap:8px">' +
-            gal.map(function (g, i) { return '<button class="tab" role="tab" data-cap="' + esc(g.caption || "") + '">' + esc(txt(g.label) || "Image " + (i + 1)) + "</button>"; }).join("") +
+            gal.map(function (g, i) { return '<button class="tab" role="tab" data-cap="' + esc(g.caption || "") + '">' + esc(txt(g.label) || "Tab " + (i + 1)) + "</button>"; }).join("") +
             '</div></div><p class="viewer-cap"></p></div>';
         }
         secs.push({ id: "overview", label: "Overview", cls: "sec", html: h });
@@ -1269,6 +1280,17 @@ window.PORTFOLIO_PROJECTS = [
       if (previousFocus) previousFocus.focus();
     }
     caseRoot.addEventListener("click", function (event) {
+      var muteButton = event.target.closest("button.ph-video-mute");
+      if (muteButton && caseRoot.contains(muteButton)) {
+        var video = $("video", muteButton.parentElement);
+        video.muted = !video.muted;
+        muteButton.setAttribute("aria-pressed", String(!video.muted));
+        muteButton.setAttribute("aria-label", video.muted ? "Unmute video" : "Mute video");
+        muteButton.innerHTML = video.muted
+          ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Zm5 4 5 6m0-6-5 6"/></svg>'
+          : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Zm4 3.5a5 5 0 0 1 0 7m3-10a9 9 0 0 1 0 13"/></svg>';
+        return;
+      }
       var link = event.target.closest("a.image-open");
       if (!link || !caseRoot.contains(link)) return;
       event.preventDefault();
@@ -1543,13 +1565,18 @@ window.PORTFOLIO_PROJECTS = [
         t.tabIndex = j === cur ? 0 : -1;
         t.classList.remove("run");
         panels[j].classList.toggle("on", j === cur);
+        var video = $("video", panels[j]);
+        if (video) {
+          if (j === cur) video.play().catch(function () {});
+          else video.pause();
+        }
       });
       cap.textContent = tabs[cur].getAttribute("data-cap");
       void tabs[cur].offsetWidth;
       tabs[cur].classList.add("run");
     };
     tabs.forEach(function (t, i) { t.addEventListener("click", function () { setTab(i); }); });
-    viewer.addEventListener("animationend", function (e) { if (e.animationName === "fill") setTab(cur + 1); });
+    viewer.addEventListener("animationend", function (e) { if (e.animationName === "fill" && !$("video", panels[cur])) setTab(cur + 1); });
     pauseBtn.addEventListener("click", function () {
       var p = viewer.classList.toggle("paused");
       pauseBtn.innerHTML = '<svg class="i"><use href="#i-' + (p ? "play" : "pause") + '"/></svg>';

@@ -1,6 +1,6 @@
 /* Portfolio data. Edit with admin.html, or by hand.
    Keep the two assignments below; the site reads them on every page.
-   Generated 2026-11-18. */
+   Generated 2026-11-20. */
 window.PORTFOLIO_CATEGORIES = [
   {
     "id": "brand",
@@ -251,7 +251,15 @@ window.PORTFOLIO_PROJECTS = [
         "text": "The project brought together identity design, information architecture, responsive UI design, and website implementation.",
         "by": ""
       },
-      "gallery": [],
+      "gallery": [
+        {
+          "label": "",
+          "caption": "",
+          "image": "images/ottam-match-cut-1920x1080.mp4",
+          "a": "#EFE3C8",
+          "b": "#D9BE8A"
+        }
+      ],
       "brief": {
         "lead": "Ottam was a completely new running club looking to establish its identity and digital presence.",
         "text": "The objective was to create a professional and recognisable brand while developing a website that could communicate its training ecosystem. The website needed to introduce the club, explain its training programmes, present training schedules, and communicate its approach to athlete development.\n\nThe experience also needed to appeal to runners with different levels of experience, making the club feel accessible to beginners while maintaining credibility among experienced athletes.\n\nThe core expectations were professionalism, athletic performance, community, and accessibility."

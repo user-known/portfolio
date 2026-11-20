@@ -54,7 +54,15 @@ window.PORTFOLIO_PROJECTS = [
         "text": "The rebranding brought a fresh perspective to ACME Interiors. The attention to detail, thoughtful design decisions, and consistency across the brand identity and website helped us establish a more refined direction for the company. The entire process was handled with creativity, professionalism, and a clear understanding of our vision.",
         "by": "Komal, Marketing Lead"
       },
-      "gallery": [],
+      "gallery": [
+        {
+          "label": "",
+          "caption": "",
+          "image": "images/interior-match-cut-1920x1080.mp4",
+          "a": "#EFE3C8",
+          "b": "#D9BE8A"
+        }
+      ],
       "brief": {
         "lead": "A new identity for a company shaping corporate spaces.",
         "text": "ACME Interiors wanted to establish a new brand identity that better represented its expertise in corporate interior design.\n\nThe existing identity had become outdated, with inconsistent visual elements and unclear brand positioning. Its website also presented the company more like a construction business than a corporate interior design firm.\n\nThe objective was to create a premium, professional, and minimal identity while improving how the company communicated its capabilities, services, and experience across digital touchpoints.\n\nI was responsible for the entire design process, from logo exploration and visual identity development to website redesign and supporting brand communication."
